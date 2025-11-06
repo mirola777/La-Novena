@@ -1,9 +1,10 @@
 export interface Artist {
-  id: string;
-  name: string;
-  description: string;
-  genre: string;
-  image?: string;
+  id: string
+  name: string
+  description: string
+  genre: string
+  event: "AM" | "808"
+  image?: string
 }
 
 export interface EventInfo {

@@ -17,6 +17,7 @@ export const ARTISTS: Artist[] = [
     description:
       "Maestro del flow underground, Juan One trae beats que sacuden el alma y letras que cuentan la verdadera historia de las calles.",
     genre: "Hip Hop",
+    event: "AM",
   },
   {
     id: "2",
@@ -24,6 +25,7 @@ export const ARTISTS: Artist[] = [
     description:
       "Productor visionario que fusiona sonidos electrónicos con la esencia del rap clásico, creando atmosferas únicas.",
     genre: "Electronic Hip Hop",
+    event: "808",
   },
   {
     id: "3",
@@ -31,6 +33,7 @@ export const ARTISTS: Artist[] = [
     description:
       "Lírico incendiario con un estilo único que combina trap melódico con mensajes profundos del underground.",
     genre: "Trap",
+    event: "AM",
   },
   {
     id: "4",
@@ -38,6 +41,7 @@ export const ARTISTS: Artist[] = [
     description:
       "Colectivo que explora los límites del soul y el hip hop, llevando el público a un viaje emocional intenso.",
     genre: "Soul Hip Hop",
+    event: "AM",
   },
   {
     id: "5",
@@ -45,6 +49,7 @@ export const ARTISTS: Artist[] = [
     description:
       "Rapero versátil que domina tanto el freestyle como las composiciones, con un flow imparable.",
     genre: "Rap",
+    event: "AM",
   },
   {
     id: "6",
@@ -52,6 +57,7 @@ export const ARTISTS: Artist[] = [
     description:
       "Artista innovador que mezcla elementos del reggaeton underground con beats experimentales.",
     genre: "Urban Experimental",
+    event: "808",
   },
   {
     id: "7",
@@ -59,6 +65,7 @@ export const ARTISTS: Artist[] = [
     description:
       "MC helado que quema el escenario con rimas afiladas y una presencia escénica magnética.",
     genre: "Rap",
+    event: "AM",
   },
   {
     id: "8",
@@ -66,6 +73,7 @@ export const ARTISTS: Artist[] = [
     description:
       "Artista conceptual que bendice el hip hop con sonidos celestiales y letras que trascienden.",
     genre: "Alternative Hip Hop",
+    event: "808",
   },
   {
     id: "9",
@@ -73,6 +81,7 @@ export const ARTISTS: Artist[] = [
     description:
       "Proyecto que distorsiona el tiempo y el espacio a través de beats complejos y narrativas futuristas.",
     genre: "Experimental",
+    event: "808",
   },
   {
     id: "10",
@@ -80,6 +89,7 @@ export const ARTISTS: Artist[] = [
     description:
       "Figura misteriosa del underground que trae historias épicas envueltas en melodías hipnóticas.",
     genre: "Storytelling Rap",
+    event: "AM",
   },
   {
     id: "11",
@@ -87,6 +97,7 @@ export const ARTISTS: Artist[] = [
     description:
       "Maestro de las tornamesas que mantiene la energía en su punto máximo con sets únicos e irrepetibles.",
     genre: "DJ Set",
+    event: "808",
   },
 ];
 

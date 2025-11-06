@@ -6,13 +6,11 @@ import { GallerySection } from "./components/sections/GallerySection";
 import { HeroSection } from "./components/sections/HeroSection";
 import { LocationSection } from "./components/sections/LocationSection";
 import { PricingSection } from "./components/sections/PricingSection";
-import { CountdownTimer } from "./components/ui/CountdownTimer";
 
 export default function Home() {
   return (
     <main className="relative">
       <HeroSection />
-      <CountdownTimer />
       <ArtistsSection />
       <PricingSection />
       <LocationSection />

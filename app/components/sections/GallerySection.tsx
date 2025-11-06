@@ -1,7 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import Image from "next/image";
 import { ScrollReveal } from "../ui/ScrollReveal";
+import { ParallaxSection } from "../ui/ParallaxSection";
 
 export function GallerySection() {
   const galleryItems = [
@@ -12,43 +15,37 @@ export function GallerySection() {
   ];
 
   return (
-    <section className="py-32 px-6 bg-black">
-      <div className="max-w-5xl mx-auto">
+    <section className="py-20 md:py-32 px-4 md:px-6 bg-black relative overflow-hidden">
+      <ParallaxSection speed={0.3} className="absolute inset-0 opacity-20 pointer-events-none">
+        <Image
+          src="/assets/background.png"
+          alt=""
+          fill
+          className="object-cover object-center no-select"
+        />
+      </ParallaxSection>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <ScrollReveal direction="up">
-          <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-8xl font-orbitron font-black text-white mb-6 tracking-tight">
+          <div className="text-center mb-16 md:mb-20">
+            <h2 className="text-6xl md:text-8xl lg:text-9xl font-teko font-black text-white mb-4 md:mb-6 tracking-tight">
               GALE<span className="text-green-400">RÍA</span>
             </h2>
-            <p className="text-xl text-gray-400 font-light">
+            <p className="text-lg md:text-xl text-gray-400 font-light">
               Los momentos que marcaron historia
             </p>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {galleryItems.map((item, index) => (
-            <ScrollReveal key={index} delay={index * 0.2}>
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="text-center py-12"
-              >
-                <div className="w-full aspect-video bg-gray-900 border border-gray-700 rounded-none mb-6 flex items-center justify-center">
-                  <span className="text-gray-600 text-sm">
-                    FOTO PLACEHOLDER
-                  </span>
-                </div>
-                <h3 className="text-xl font-orbitron font-light text-white mb-2 tracking-widest">
-                  {item.title}
-                </h3>
-                <p className="text-gray-400 font-light">{item.description}</p>
-              </motion.div>
-            </ScrollReveal>
+            <GalleryCard key={index} item={item} index={index} />
           ))}
         </div>
 
         <ScrollReveal delay={0.8}>
-          <div className="text-center mt-20">
-            <div className="text-3xl font-orbitron font-light text-green-400 mb-4">
+          <div className="text-center mt-16 md:mt-20">
+            <div className="text-2xl md:text-3xl font-teko font-bold text-green-400 mb-4">
               #LaNovena1
             </div>
             <p className="text-gray-400 font-light">
@@ -58,5 +55,57 @@ export function GallerySection() {
         </ScrollReveal>
       </div>
     </section>
+  );
+}
+
+interface GalleryItem {
+  title: string;
+  description: string;
+}
+
+function GalleryCard({ item, index }: { item: GalleryItem; index: number }) {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
+  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0.5]);
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1, 0.95]);
+
+  return (
+    <ScrollReveal delay={index * 0.15}>
+      <motion.div
+        ref={ref}
+        style={{ opacity, scale }}
+        className="group"
+      >
+        <motion.div
+          style={{ y }}
+          className="relative overflow-hidden rounded-lg"
+        >
+          <div className="relative w-full aspect-video overflow-hidden">
+            <Image
+              src="/assets/background.png"
+              alt={item.title}
+              fill
+              className="object-cover object-center no-select transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-black via-black/60 to-transparent" />
+            <div className="absolute inset-0 border border-green-400/30 group-hover:border-green-400/60 transition-colors duration-300" />
+          </div>
+
+          <div className="absolute bottom-0 left-0 right-0 p-6">
+            <h3 className="text-xl md:text-2xl font-teko font-bold text-white mb-2 tracking-wide">
+              {item.title}
+            </h3>
+            <p className="text-sm md:text-base text-gray-300 font-light">
+              {item.description}
+            </p>
+          </div>
+        </motion.div>
+      </motion.div>
+    </ScrollReveal>
   );
 }
