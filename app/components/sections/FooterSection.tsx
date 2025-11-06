@@ -6,25 +6,23 @@ import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function FooterSection() {
   return (
-    <footer className="relative py-20 px-6 bg-black">
-      <div className="absolute inset-0 bg-linear-to-t from-purple-900/20 to-black" />
-
-      <div className="relative z-10 max-w-6xl mx-auto">
+    <footer className="relative py-32 px-6 bg-black">
+      <div className="relative z-10 max-w-5xl mx-auto">
         <ScrollReveal direction="up">
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
+              initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1 }}
-              className="mb-8"
+              transition={{ duration: 1.5 }}
+              className="mb-12"
             >
-              <h2 className="text-7xl md:text-9xl font-orbitron font-black gradient-text mb-4">
+              <h2 className="text-8xl md:text-9xl font-orbitron font-black text-white mb-8 tracking-tight">
                 6 DE DICIEMBRE
               </h2>
-              <div className="text-3xl md:text-5xl font-bold text-yellow-400 mb-2">
+              <div className="text-4xl md:text-6xl font-light text-green-400 mb-6">
                 2025
               </div>
-              <div className="text-2xl md:text-4xl text-pink-400 font-orbitron">
+              <div className="text-2xl md:text-3xl text-gray-400 font-light tracking-widest">
                 PUENTE DE LA 4 SUR
               </div>
             </motion.div>

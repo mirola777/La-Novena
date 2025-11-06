@@ -7,52 +7,52 @@ export function CountdownTimer() {
   const timeLeft = useCountdown(EVENT_DATE);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-purple-900/20 to-black">
-      <div className="text-center">
-        <h2 className="text-4xl md:text-6xl font-orbitron font-bold mb-12 gradient-text">
-          FALTAN
+    <div className="flex items-center justify-center h-screen bg-black">
+      <div className="text-center max-w-4xl mx-auto px-6">
+        <h2 className="text-2xl md:text-3xl font-light text-gray-400 mb-16 tracking-[0.2em] uppercase">
+          Faltan
         </h2>
 
-        <div className="grid grid-cols-4 gap-4 md:gap-8 mb-8">
-          <div className="bg-gradient-to-b from-pink-500/20 to-purple-900/20 p-6 rounded-lg border border-pink-500/30 glow">
-            <div className="text-4xl md:text-6xl font-orbitron font-bold text-glow">
+        <div className="grid grid-cols-4 gap-8 md:gap-12 mb-16">
+          <div className="text-center">
+            <div className="text-6xl md:text-8xl font-orbitron font-black text-white mb-4">
               {timeLeft.days.toString().padStart(2, "0")}
             </div>
-            <div className="text-sm md:text-lg uppercase tracking-wider text-pink-300">
+            <div className="text-sm md:text-base text-gray-400 uppercase tracking-widest">
               Días
             </div>
           </div>
 
-          <div className="bg-gradient-to-b from-pink-500/20 to-purple-900/20 p-6 rounded-lg border border-pink-500/30 glow">
-            <div className="text-4xl md:text-6xl font-orbitron font-bold text-glow">
+          <div className="text-center">
+            <div className="text-6xl md:text-8xl font-orbitron font-black text-white mb-4">
               {timeLeft.hours.toString().padStart(2, "0")}
             </div>
-            <div className="text-sm md:text-lg uppercase tracking-wider text-pink-300">
-              Horas
+            <div className="text-sm md:text-base text-gray-400 uppercase tracking-widest">
+              Hrs
             </div>
           </div>
 
-          <div className="bg-gradient-to-b from-pink-500/20 to-purple-900/20 p-6 rounded-lg border border-pink-500/30 glow">
-            <div className="text-4xl md:text-6xl font-orbitron font-bold text-glow">
+          <div className="text-center">
+            <div className="text-6xl md:text-8xl font-orbitron font-black text-white mb-4">
               {timeLeft.minutes.toString().padStart(2, "0")}
             </div>
-            <div className="text-sm md:text-lg uppercase tracking-wider text-pink-300">
+            <div className="text-sm md:text-base text-gray-400 uppercase tracking-widest">
               Min
             </div>
           </div>
 
-          <div className="bg-gradient-to-b from-pink-500/20 to-purple-900/20 p-6 rounded-lg border border-pink-500/30 glow">
-            <div className="text-4xl md:text-6xl font-orbitron font-bold text-glow">
+          <div className="text-center">
+            <div className="text-6xl md:text-8xl font-orbitron font-black text-green-400 mb-4">
               {timeLeft.seconds.toString().padStart(2, "0")}
             </div>
-            <div className="text-sm md:text-lg uppercase tracking-wider text-pink-300">
+            <div className="text-sm md:text-base text-gray-400 uppercase tracking-widest">
               Seg
             </div>
           </div>
         </div>
 
-        <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
-          Para el evento más épico del underground
+        <p className="text-lg text-gray-500 font-light">
+          Para la fusión del underground
         </p>
       </div>
     </div>
