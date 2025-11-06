@@ -1,9 +1,9 @@
 "use client";
 
+import { EVENT_DATE } from "@/app/constants/data";
+import { useCountdown } from "@/app/hooks/useCountdown";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useCountdown } from "@/app/hooks/useCountdown";
-import { EVENT_DATE } from "@/app/constants/data";
 import { ParallaxSection } from "../ui/ParallaxSection";
 
 export function HeroSection() {

@@ -1,12 +1,12 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import Image from "next/image";
+import { useRef } from "react";
 import { ARTISTS } from "../../constants/data";
+import type { Artist } from "../../types";
 import { ParallaxSection } from "../ui/ParallaxSection";
 import { ScrollReveal } from "../ui/ScrollReveal";
-import type { Artist } from "../../types";
 
 export function ArtistsSection() {
   return (
@@ -39,7 +39,11 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [150, -150]);
-  const scale = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.8, 1, 1, 0.8]);
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.7, 1],
+    [0.8, 1, 1, 0.8]
+  );
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
   const backgroundY = useTransform(scrollYProgress, [0, 1], [0, 200]);
 
@@ -49,10 +53,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
       style={{ opacity }}
       className="min-h-screen flex items-center justify-center px-4 md:px-6 relative overflow-hidden"
     >
-      <motion.div 
-        style={{ y: backgroundY }}
-        className="absolute inset-0"
-      >
+      <motion.div style={{ y: backgroundY }} className="absolute inset-0">
         <Image
           src="/assets/background.png"
           alt=""
@@ -62,17 +63,17 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
         />
       </motion.div>
 
-      <ParallaxSection speed={0.4} className="absolute inset-0 pointer-events-none">
+      <ParallaxSection
+        speed={0.4}
+        className="absolute inset-0 pointer-events-none"
+      >
         <div className="absolute top-1/4 right-1/4 w-px h-32 bg-linear-to-b from-green-400/40 to-transparent" />
         <div className="absolute bottom-1/3 left-1/5 w-px h-24 bg-linear-to-t from-white/20 to-transparent" />
         <div className="absolute top-1/3 left-1/3 w-2 h-2 bg-green-400 rounded-full animate-pulse" />
       </ParallaxSection>
 
       <div className="max-w-5xl mx-auto w-full text-center relative z-10">
-        <motion.div 
-          style={{ y, scale }} 
-          className="space-y-6 md:space-y-8"
-        >
+        <motion.div style={{ y, scale }} className="space-y-6 md:space-y-8">
           <div className="relative">
             <div className="text-7xl md:text-8xl lg:text-9xl font-teko font-black text-green-400/10 absolute -top-12 md:-top-16 left-1/2 transform -translate-x-1/2 pointer-events-none select-none">
               {(index + 1).toString().padStart(2, "0")}
@@ -83,7 +84,9 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
                 {artist.name}
               </h3>
               <Image
-                src={artist.event === "AM" ? "/assets/AM.png" : "/assets/808.png"}
+                src={
+                  artist.event === "AM" ? "/assets/AM.png" : "/assets/808.png"
+                }
                 alt={artist.event}
                 width={60}
                 height={60}

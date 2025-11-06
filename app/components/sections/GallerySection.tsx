@@ -1,10 +1,10 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import Image from "next/image";
-import { ScrollReveal } from "../ui/ScrollReveal";
+import { useRef } from "react";
 import { ParallaxSection } from "../ui/ParallaxSection";
+import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function GallerySection() {
   const galleryItems = [
@@ -16,7 +16,10 @@ export function GallerySection() {
 
   return (
     <section className="py-20 md:py-32 px-4 md:px-6 bg-black relative overflow-hidden">
-      <ParallaxSection speed={0.3} className="absolute inset-0 opacity-20 pointer-events-none">
+      <ParallaxSection
+        speed={0.3}
+        className="absolute inset-0 opacity-20 pointer-events-none"
+      >
         <Image
           src="/assets/background.png"
           alt=""
@@ -71,16 +74,16 @@ function GalleryCard({ item, index }: { item: GalleryItem; index: number }) {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
-  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0.5]);
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.7, 1],
+    [0, 1, 1, 0.5]
+  );
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1, 0.95]);
 
   return (
     <ScrollReveal delay={index * 0.15}>
-      <motion.div
-        ref={ref}
-        style={{ opacity, scale }}
-        className="group"
-      >
+      <motion.div ref={ref} style={{ opacity, scale }} className="group">
         <motion.div
           style={{ y }}
           className="relative overflow-hidden rounded-lg"

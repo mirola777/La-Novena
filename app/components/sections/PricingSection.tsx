@@ -1,16 +1,19 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import Image from "next/image";
+import { useRef } from "react";
 import { PRICING } from "../../constants/data";
-import { ScrollReveal } from "../ui/ScrollReveal";
 import { ParallaxSection } from "../ui/ParallaxSection";
+import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function PricingSection() {
   return (
     <section className="py-20 md:py-32 px-4 md:px-6 bg-black relative overflow-hidden">
-      <ParallaxSection speed={0.4} className="absolute inset-0 opacity-20 pointer-events-none">
+      <ParallaxSection
+        speed={0.4}
+        className="absolute inset-0 opacity-20 pointer-events-none"
+      >
         <Image
           src="/assets/background.png"
           alt=""
@@ -63,7 +66,11 @@ function PricingCard({ item, index }: { item: PricingItem; index: number }) {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [40, -40]);
-  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0.5]);
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.7, 1],
+    [0, 1, 1, 0.5]
+  );
 
   return (
     <ScrollReveal delay={index * 0.15}>

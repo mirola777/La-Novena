@@ -18,6 +18,8 @@ export const ARTISTS: Artist[] = [
       "Maestro del flow underground, Juan One trae beats que sacuden el alma y letras que cuentan la verdadera historia de las calles.",
     genre: "Hip Hop",
     event: "AM",
+    spotify: "https://open.spotify.com/artist/juanone",
+    instagram: "https://instagram.com/juanone",
   },
   {
     id: "2",
@@ -26,6 +28,8 @@ export const ARTISTS: Artist[] = [
       "Productor visionario que fusiona sonidos electrónicos con la esencia del rap clásico, creando atmosferas únicas.",
     genre: "Electronic Hip Hop",
     event: "808",
+    spotify: "https://open.spotify.com/artist/beleuve",
+    instagram: "https://instagram.com/beleuve",
   },
   {
     id: "3",
@@ -34,6 +38,8 @@ export const ARTISTS: Artist[] = [
       "Lírico incendiario con un estilo único que combina trap melódico con mensajes profundos del underground.",
     genre: "Trap",
     event: "AM",
+    spotify: "https://open.spotify.com/artist/xkarlex",
+    instagram: "https://instagram.com/xkarlex",
   },
   {
     id: "4",
@@ -42,6 +48,8 @@ export const ARTISTS: Artist[] = [
       "Colectivo que explora los límites del soul y el hip hop, llevando el público a un viaje emocional intenso.",
     genre: "Soul Hip Hop",
     event: "AM",
+    spotify: "https://open.spotify.com/artist/khatarsis",
+    instagram: "https://instagram.com/khatarsis",
   },
   {
     id: "5",
@@ -50,6 +58,8 @@ export const ARTISTS: Artist[] = [
       "Rapero versátil que domina tanto el freestyle como las composiciones, con un flow imparable.",
     genre: "Rap",
     event: "AM",
+    spotify: "https://open.spotify.com/artist/jacko",
+    instagram: "https://instagram.com/jacko",
   },
   {
     id: "6",
@@ -58,6 +68,8 @@ export const ARTISTS: Artist[] = [
       "Artista innovador que mezcla elementos del reggaeton underground con beats experimentales.",
     genre: "Urban Experimental",
     event: "808",
+    spotify: "https://open.spotify.com/artist/jpssno",
+    instagram: "https://instagram.com/jpssno",
   },
   {
     id: "7",
@@ -66,6 +78,8 @@ export const ARTISTS: Artist[] = [
       "MC helado que quema el escenario con rimas afiladas y una presencia escénica magnética.",
     genre: "Rap",
     event: "AM",
+    spotify: "https://open.spotify.com/artist/iceefran",
+    instagram: "https://instagram.com/iceefran",
   },
   {
     id: "8",
@@ -74,6 +88,8 @@ export const ARTISTS: Artist[] = [
       "Artista conceptual que bendice el hip hop con sonidos celestiales y letras que trascienden.",
     genre: "Alternative Hip Hop",
     event: "808",
+    spotify: "https://open.spotify.com/artist/saintmadonna",
+    instagram: "https://instagram.com/saintmadonna",
   },
   {
     id: "9",
@@ -82,6 +98,8 @@ export const ARTISTS: Artist[] = [
       "Proyecto que distorsiona el tiempo y el espacio a través de beats complejos y narrativas futuristas.",
     genre: "Experimental",
     event: "808",
+    spotify: "https://open.spotify.com/artist/timedisorder",
+    instagram: "https://instagram.com/timedisorder",
   },
   {
     id: "10",
@@ -90,6 +108,8 @@ export const ARTISTS: Artist[] = [
       "Figura misteriosa del underground que trae historias épicas envueltas en melodías hipnóticas.",
     genre: "Storytelling Rap",
     event: "AM",
+    spotify: "https://open.spotify.com/artist/enigma",
+    instagram: "https://instagram.com/enigmaleyenda",
   },
   {
     id: "11",
@@ -98,6 +118,8 @@ export const ARTISTS: Artist[] = [
       "Maestro de las tornamesas que mantiene la energía en su punto máximo con sets únicos e irrepetibles.",
     genre: "DJ Set",
     event: "808",
+    spotify: "https://open.spotify.com/artist/djenvivo",
+    instagram: "https://instagram.com/djenvivo",
   },
 ];
 

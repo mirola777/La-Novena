@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Calendar, Clock, MapPin } from "lucide-react";
+import Image from "next/image";
 import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function FooterSection() {
@@ -88,7 +88,8 @@ export function FooterSection() {
                 Asado Místico
               </h3>
               <p className="text-gray-400 text-sm">
-                Gastronomía underground · Granizados artesanales · Parrilla nocturna
+                Gastronomía underground · Granizados artesanales · Parrilla
+                nocturna
               </p>
             </motion.div>
 

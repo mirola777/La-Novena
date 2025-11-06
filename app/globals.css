@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --font-inter: 'Inter', sans-serif;
-  --font-teko: 'Teko', sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-abolition: "Abolition", sans-serif;
 }
 
 @theme inline {
   --font-sans: var(--font-inter);
-  --font-display: var(--font-teko);
+  --font-display: var(--font-abolition);
 }
 
 * {
@@ -27,8 +27,17 @@ body {
   overflow-x: hidden;
 }
 
-.font-teko {
-  font-family: var(--font-teko);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-abolition);
+}
+
+.font-abolition {
+  font-family: var(--font-abolition);
 }
 
 .no-select {

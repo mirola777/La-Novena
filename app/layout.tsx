@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
-import { Inter, Teko } from "next/font/google";
+﻿import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,10 +8,10 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const teko = Teko({
-  variable: "--font-teko",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const abolition = localFont({
+  src: "../public/assets/abolition-regular.ttf",
+  variable: "--font-abolition",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -36,12 +37,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
-      <body className={`${inter.variable} ${teko.variable} antialiased`}>
+      <body className={`${inter.variable} ${abolition.variable} antialiased`}>
         {children}
       </body>
     </html>
