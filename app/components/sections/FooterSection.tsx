@@ -7,7 +7,7 @@ import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function FooterSection() {
   return (
-    <footer className="relative py-20 md:py-32 px-4 md:px-6 bg-black overflow-hidden">
+    <footer className="relative py-32 md:py-40 px-6 md:px-10 lg:px-16 bg-black overflow-hidden">
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <Image
           src="/assets/background.png"
@@ -19,51 +19,51 @@ export function FooterSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <ScrollReveal direction="up">
-          <div className="text-center mb-16 md:mb-20">
+          <div className="text-center mb-20 md:mb-24">
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.5 }}
-              className="mb-12"
+              className="mb-16"
             >
-              <h2 className="text-7xl md:text-8xl lg:text-9xl font-teko font-black text-white mb-4 md:mb-8 tracking-tight">
+              <h2 className="text-7xl md:text-8xl lg:text-9xl font-abolition font-black text-white mb-6 md:mb-10 tracking-tight">
                 6 DE DICIEMBRE
               </h2>
-              <div className="text-4xl md:text-5xl lg:text-6xl font-teko font-black text-green-400 mb-4 md:mb-6">
+              <div className="text-5xl md:text-6xl lg:text-7xl font-abolition font-black text-green-400 mb-6 md:mb-8">
                 2025
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl text-gray-400 font-light tracking-widest">
+              <div className="text-2xl md:text-3xl lg:text-4xl text-gray-400 font-light tracking-widest">
                 PUENTE DE LA 4 SUR
               </div>
             </motion.div>
 
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="inline-block p-6 md:p-8 border border-green-400/50 rounded-lg bg-green-400/5"
+              className="inline-block p-8 md:p-10 border border-green-400/50 rounded-lg bg-green-400/5 mx-auto"
             >
-              <div className="mb-6">
+              <div className="mb-8">
                 <Image
                   src="/assets/lanovena.png"
                   alt="La Novena-1"
-                  width={400}
-                  height={120}
-                  className="w-auto h-20 md:h-24 object-contain mx-auto no-select"
+                  width={500}
+                  height={140}
+                  className="w-auto h-24 md:h-28 object-contain mx-auto no-select"
                 />
               </div>
-              <div className="text-lg md:text-xl text-gray-300 mb-6">
+              <div className="text-xl md:text-2xl text-gray-300 mb-8">
                 La fusión que cambiará todo
               </div>
-              <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-sm md:text-base">
+              <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 text-base md:text-lg">
                 <div className="flex items-center gap-2 text-green-400">
-                  <Calendar className="w-4 h-4 md:w-5 md:h-5" />
+                  <Calendar className="w-5 h-5 md:w-6 md:h-6" />
                   <span>Una noche histórica</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-400">
-                  <Clock className="w-4 h-4 md:w-5 md:h-5" />
+                  <Clock className="w-5 h-5 md:w-6 md:h-6" />
                   <span>6:00 PM - 2:00 AM</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-400">
-                  <MapPin className="w-4 h-4 md:w-5 md:h-5" />
+                  <MapPin className="w-5 h-5 md:w-6 md:h-6" />
                   <span>Medellín Underground</span>
                 </div>
               </div>
@@ -72,22 +72,22 @@ export function FooterSection() {
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={0.3}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-16 max-w-5xl mx-auto">
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="text-center p-6 border border-green-400/30 rounded-lg bg-black/50"
+              className="text-center p-8 border border-green-400/30 rounded-lg bg-black/50"
             >
               <Image
                 src="/assets/AM.png"
                 alt="Asado Místico"
-                width={80}
-                height={80}
-                className="w-16 h-16 object-contain mx-auto mb-4 no-select"
+                width={90}
+                height={90}
+                className="w-20 h-20 object-contain mx-auto mb-6 no-select filter-none"
               />
-              <h3 className="text-xl md:text-2xl font-teko font-bold text-white mb-3">
+              <h3 className="text-2xl md:text-3xl font-abolition font-bold text-white mb-4">
                 Asado Místico
               </h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-base md:text-lg">
                 Gastronomía underground · Granizados artesanales · Parrilla
                 nocturna
               </p>
@@ -95,19 +95,19 @@ export function FooterSection() {
 
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="text-center p-6 border border-green-400/30 rounded-lg bg-black/50"
+              className="text-center p-8 border border-green-400/30 rounded-lg bg-black/50"
             >
               <Image
                 src="/assets/808.png"
                 alt="808 Fest"
-                width={80}
-                height={80}
-                className="w-16 h-16 object-contain mx-auto mb-4 no-select"
+                width={90}
+                height={90}
+                className="w-20 h-20 object-contain mx-auto mb-6 no-select filter-none"
               />
-              <h3 className="text-xl md:text-2xl font-teko font-bold text-white mb-3">
+              <h3 className="text-2xl md:text-3xl font-abolition font-bold text-white mb-4">
                 808 Fest
               </h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-base md:text-lg">
                 Música electrónica · Hip hop underground · Cultura urbana
               </p>
             </motion.div>
@@ -115,41 +115,41 @@ export function FooterSection() {
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={0.5}>
-          <div className="text-center border-t border-gray-800 pt-8">
-            <div className="mb-8">
+          <div className="text-center border-t border-gray-800 pt-12 md:pt-16">
+            <div className="mb-12">
               <Image
                 src="/assets/logos.png"
                 alt="Patrocinadores"
-                width={600}
-                height={80}
-                className="w-auto h-12 md:h-16 object-contain mx-auto no-select opacity-60"
+                width={800}
+                height={100}
+                className="w-auto h-16 md:h-20 object-contain mx-auto no-select filter-none opacity-90"
               />
             </div>
 
-            <div className="mb-6">
-              <div className="text-2xl md:text-3xl font-teko font-black text-green-400 mb-2">
+            <div className="mb-10">
+              <div className="text-3xl md:text-4xl font-abolition font-black text-green-400 mb-4">
                 #LaNovena1
               </div>
-              <p className="text-gray-400 text-sm md:text-base">
+              <p className="text-gray-400 text-lg md:text-xl">
                 Síguenos para actualizaciones y contenido exclusivo
               </p>
             </div>
 
-            <div className="text-gray-500 text-xs md:text-sm">
-              <p className="mb-2">
+            <div className="text-gray-500 text-sm md:text-base mb-8">
+              <p className="mb-3">
                 © 2025 La Novena-1 • Asado Místico × 808 Fest
               </p>
               <p>Medellín, Colombia • Underground Culture</p>
             </div>
 
             <motion.div
-              className="mt-8"
+              className="mt-12"
               animate={{
                 opacity: [0.6, 1, 0.6],
               }}
               transition={{ repeat: Infinity, duration: 3 }}
             >
-              <span className="text-xl md:text-2xl text-green-400 font-bold">
+              <span className="text-2xl md:text-3xl text-green-400 font-bold">
                 ¡Nos vemos en la historia!
               </span>
             </motion.div>

@@ -20,7 +20,7 @@ export function LocationSection() {
   return (
     <section
       ref={ref}
-      className="min-h-screen py-32 md:py-40 px-6 md:px-10 lg:px-16 bg-black relative overflow-hidden flex items-center"
+      className="min-h-screen py-32 md:py-40 px-6 md:px-12 lg:px-20 bg-black relative overflow-hidden flex items-center"
     >
       <motion.div style={{ y: backgroundY }} className="absolute inset-0">
         <ParallaxSection speed={0.5} className="absolute inset-0 opacity-20">
@@ -49,13 +49,13 @@ export function LocationSection() {
 
       <div className="max-w-7xl mx-auto relative z-10 w-full">
         <ScrollReveal direction="up">
-          <div className="text-center mb-20 md:mb-28 px-4">
+          <div className="text-center mb-24 md:mb-32">
             <motion.h2
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className="text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white mb-6 tracking-tight"
+              className="text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white mb-8 tracking-tight"
             >
               UBICA<span className="text-green-400">CIÓN</span>
             </motion.h2>
@@ -71,12 +71,12 @@ export function LocationSection() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-          <motion.div style={{ y }} className="space-y-10 md:space-y-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-24 items-center">
+          <motion.div style={{ y }} className="space-y-12 md:space-y-14">
             <ScrollReveal direction="left">
               <motion.div
                 whileHover={{ scale: 1.05, x: 10 }}
-                className="p-8 border-2 border-green-400/30 rounded-2xl bg-black/60 backdrop-blur-sm relative overflow-hidden group"
+                className="p-10 border-2 border-green-400/30 rounded-2xl bg-black/60 backdrop-blur-sm relative overflow-hidden group"
               >
                 <motion.div
                   className="absolute inset-0 bg-linear-to-r from-green-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -120,7 +120,7 @@ export function LocationSection() {
             <ScrollReveal direction="left" delay={0.2}>
               <motion.div
                 whileHover={{ scale: 1.05, x: 10 }}
-                className="p-8 border-2 border-green-400/30 rounded-2xl bg-black/60 backdrop-blur-sm relative overflow-hidden group"
+                className="p-10 border-2 border-green-400/30 rounded-2xl bg-black/60 backdrop-blur-sm relative overflow-hidden group"
               >
                 <motion.div
                   className="absolute inset-0 bg-linear-to-r from-green-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -165,7 +165,7 @@ export function LocationSection() {
             <ScrollReveal direction="left" delay={0.4}>
               <motion.div
                 whileHover={{ scale: 1.05, x: 10 }}
-                className="p-8 border-2 border-green-400/30 rounded-2xl bg-black/60 backdrop-blur-sm relative overflow-hidden group"
+                className="p-10 border-2 border-green-400/30 rounded-2xl bg-black/60 backdrop-blur-sm relative overflow-hidden group"
               >
                 <motion.div
                   className="absolute inset-0 bg-linear-to-r from-green-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -241,9 +241,9 @@ export function LocationSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
                 viewport={{ once: true }}
-                className="mt-10 text-center"
+                className="mt-12 text-center"
               >
-                <h3 className="text-3xl md:text-4xl font-abolition font-bold text-green-400 mb-6">
+                <h3 className="text-3xl md:text-4xl font-abolition font-bold text-green-400 mb-8">
                   El Corazón del Underground
                 </h3>
                 <p className="text-xl text-gray-400 font-light leading-relaxed">

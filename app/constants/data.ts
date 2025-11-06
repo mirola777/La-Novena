@@ -171,15 +171,48 @@ export const MERCHANDISE: Merchandise[] = [
 
 export const ORGANIZERS: Organizer[] = [
   {
-    name: "Asado Místico Crew",
-    role: "Co-Organizador",
+    name: "Mirola",
+    role: "Co-Organizador Principal",
     description:
-      "Pioneros en la escena underground, creadores de experiencias únicas que fusionan música y gastronomía.",
+      "Visionario detrás de La Novena-1, conectando culturas y creando experiencias inolvidables.",
+    instagram: "https://instagram.com/mirola",
   },
   {
-    name: "808 Fest Team",
-    role: "Co-Organizador",
+    name: "DavidMS",
+    role: "Director Creativo",
     description:
-      "Especialistas en eventos electrónicos y cultura urbana, llevando el underground a otro nivel.",
+      "Mente maestra de la producción, llevando cada detalle a la perfección.",
+    instagram: "https://instagram.com/davidms",
+  },
+  {
+    name: "Tussi",
+    role: "Coordinador de Artistas",
+    description: "El enlace perfecto entre el talento y el escenario.",
+    instagram: "https://instagram.com/tussi",
+  },
+  {
+    name: "Andrew",
+    role: "Producción Técnica",
+    description: "Arquitecto del sonido y la experiencia audiovisual.",
+    instagram: "https://instagram.com/andrew",
+  },
+  {
+    name: "Gundam",
+    role: "Logística y Operaciones",
+    description: "El cerebro detrás de la organización impecable del evento.",
+    instagram: "https://instagram.com/gundam",
+  },
+  {
+    name: "Oasis Ticket JPSSND",
+    role: "Gestión de Boletas",
+    description:
+      "Garantizando que cada asistente tenga su lugar en la historia.",
+    instagram: "https://instagram.com/oasisticket",
+  },
+  {
+    name: "Meyker",
+    role: "Marketing y Comunicaciones",
+    description: "Difundiendo la palabra del underground a toda la ciudad.",
+    instagram: "https://instagram.com/meyker",
   },
 ];

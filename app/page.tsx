@@ -5,6 +5,7 @@ import { FooterSection } from "./components/sections/FooterSection";
 import { GallerySection } from "./components/sections/GallerySection";
 import { HeroSection } from "./components/sections/HeroSection";
 import { LocationSection } from "./components/sections/LocationSection";
+import { OrganizersSection } from "./components/sections/OrganizersSection";
 import { PricingSection } from "./components/sections/PricingSection";
 import { AudioPlayer } from "./components/ui/AudioPlayer";
 import { Navbar } from "./components/ui/Navbar";
@@ -16,10 +17,21 @@ export default function Home() {
       <AudioPlayer />
       <main className="relative">
         <HeroSection />
-        <ArtistsSection />
-        <PricingSection />
-        <LocationSection />
-        <GallerySection />
+        <div className="py-16 md:py-24 lg:py-32">
+          <ArtistsSection />
+        </div>
+        <div className="py-16 md:py-24 lg:py-32">
+          <PricingSection />
+        </div>
+        <div className="py-16 md:py-24 lg:py-32">
+          <LocationSection />
+        </div>
+        <div className="py-16 md:py-24 lg:py-32">
+          <GallerySection />
+        </div>
+        <div className="py-16 md:py-24 lg:py-32">
+          <OrganizersSection />
+        </div>
         <FooterSection />
       </main>
     </>

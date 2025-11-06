@@ -34,4 +34,5 @@ export interface Organizer {
   role: string;
   description: string;
   image?: string;
+  instagram?: string;
 }

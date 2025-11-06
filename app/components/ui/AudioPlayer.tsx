@@ -19,28 +19,35 @@ export function AudioPlayer() {
       const audio = audioRef.current;
       audio.volume = 0.3;
 
-      const playAudio = () => {
-        audio
-          .play()
-          .then(() => setIsPlaying(true))
-          .catch(() => {
-            // Si falla el autoplay, esperamos interacción del usuario
-            document.addEventListener(
-              "click",
-              () => {
-                audio
-                  .play()
-                  .then(() => setIsPlaying(true))
-                  .catch(() => {});
-              },
-              { once: true }
-            );
+      const playAudio = async () => {
+        try {
+          await audio.play();
+          setIsPlaying(true);
+        } catch (error) {
+          const handleFirstInteraction = async () => {
+            try {
+              await audio.play();
+              setIsPlaying(true);
+              document.removeEventListener("click", handleFirstInteraction);
+              document.removeEventListener(
+                "touchstart",
+                handleFirstInteraction
+              );
+            } catch (err) {
+              console.log("Autoplay prevented");
+            }
+          };
+
+          document.addEventListener("click", handleFirstInteraction, {
+            once: true,
           });
+          document.addEventListener("touchstart", handleFirstInteraction, {
+            once: true,
+          });
+        }
       };
 
-      // Intentar reproducir después de un pequeño delay
-      const playTimeout = setTimeout(playAudio, 500);
-      return () => clearTimeout(playTimeout);
+      setTimeout(playAudio, 1000);
     }
   }, [isMounted]);
 

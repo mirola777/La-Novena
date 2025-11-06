@@ -25,7 +25,7 @@ export function GallerySection() {
   return (
     <section
       ref={sectionRef}
-      className="py-32 md:py-40 px-6 md:px-10 lg:px-16 bg-black relative overflow-hidden"
+      className="px-6 md:px-12 lg:px-20 bg-black relative overflow-hidden"
     >
       <motion.div style={{ y: backgroundY }} className="absolute inset-0">
         <ParallaxSection speed={0.3} className="absolute inset-0 opacity-20">
@@ -54,13 +54,13 @@ export function GallerySection() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <ScrollReveal direction="up">
-          <div className="text-center mb-20 md:mb-28 px-4">
+          <div className="text-center mb-20 md:mb-28">
             <motion.h2
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className="text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white mb-6 tracking-tight"
+              className="text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white mb-8 md:mb-12 tracking-tight"
             >
               GALE<span className="text-green-400">RÍA</span>
             </motion.h2>
@@ -76,7 +76,7 @@ export function GallerySection() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 lg:gap-20">
           {galleryItems.map((item, index) => (
             <GalleryCard key={index} item={item} index={index} />
           ))}

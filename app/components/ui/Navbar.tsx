@@ -39,13 +39,12 @@ export function Navbar() {
       style={{ opacity }}
       className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-2xl border-b-2 border-green-400/30 shadow-lg shadow-black/50"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-4 md:py-5">
-        <div className="flex items-center justify-between gap-8">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-6 md:py-7">
+        <div className="flex items-center justify-center gap-8 md:gap-16 lg:gap-24">
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="flex-1 flex justify-start"
           >
             <motion.div
               whileHover={{ scale: 1.15, rotate: 5 }}
@@ -55,9 +54,9 @@ export function Navbar() {
               <Image
                 src="/assets/AM.png"
                 alt="Asado Místico"
-                width={60}
-                height={60}
-                className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 object-contain no-select cursor-pointer"
+                width={80}
+                height={80}
+                className="w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 object-contain no-select cursor-pointer"
               />
             </motion.div>
           </motion.div>
@@ -71,7 +70,7 @@ export function Navbar() {
               type: "spring",
               stiffness: 200,
             }}
-            className="shrink-0 relative"
+            className="relative"
           >
             <motion.div
               animate={{
@@ -92,9 +91,9 @@ export function Navbar() {
               <Image
                 src="/assets/lanovena.png"
                 alt="La Novena-1"
-                width={280}
-                height={70}
-                className="w-auto h-12 md:h-14 lg:h-16 object-contain no-select cursor-pointer"
+                width={320}
+                height={85}
+                className="w-auto h-14 md:h-16 lg:h-[75px] object-contain no-select cursor-pointer"
                 priority
               />
             </motion.div>
@@ -116,7 +115,6 @@ export function Navbar() {
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="flex-1 flex justify-end"
           >
             <motion.div
               whileHover={{ scale: 1.15, rotate: -5 }}
@@ -126,9 +124,9 @@ export function Navbar() {
               <Image
                 src="/assets/808.png"
                 alt="808 Fest"
-                width={60}
-                height={60}
-                className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 object-contain no-select cursor-pointer"
+                width={80}
+                height={80}
+                className="w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 object-contain no-select cursor-pointer"
               />
             </motion.div>
           </motion.div>
