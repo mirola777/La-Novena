@@ -25,7 +25,7 @@ export function GallerySection() {
   return (
     <section
       ref={sectionRef}
-      className="px-6 md:px-12 lg:px-20 relative overflow-hidden mx-auto"
+      className="px-6 md:px-12 lg:px-20 relative overflow-hidden mx-auto justify-center"
     >
       <motion.div style={{ y: backgroundY }} className="absolute inset-0">
         <ParallaxSection speed={0.3} className="absolute inset-0 opacity-20">

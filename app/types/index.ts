@@ -5,6 +5,8 @@ export interface Artist {
   genre: string;
   event: "AM" | "808";
   image?: string;
+  backgroundImage?: string;
+  profileImage?: string;
   spotify?: string;
   instagram?: string;
 }

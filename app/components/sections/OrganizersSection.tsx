@@ -20,7 +20,7 @@ export function OrganizersSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-32 md:py-40 px-4 md:px-8 lg:px-16 bg-black overflow-hidden"
+      className="relative py-32 md:py-40 px-4 md:px-8 lg:px-16 bg-black overflow-hidden flex items-center justify-center"
     >
       <motion.div style={{ y: backgroundY }} className="absolute inset-0">
         <ParallaxSection speed={0.4} className="absolute inset-0 opacity-20">

@@ -100,7 +100,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
     >
       <motion.div style={{ y: backgroundY }} className="absolute inset-0">
         <Image
-          src="/assets/background.png"
+          src={artist.backgroundImage || "/assets/background.png"}
           alt=""
           fill
           className="object-cover object-center opacity-20 no-select"
@@ -248,7 +248,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
           >
             <div className="relative w-full h-full">
               <Image
-                src="/assets/background.png"
+                src={artist.profileImage || "/assets/background.png"}
                 alt={artist.name}
                 fill
                 className="object-cover object-center no-select transition-transform duration-700 group-hover:scale-110"

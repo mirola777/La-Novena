@@ -17,7 +17,7 @@ export function FooterSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 mx-auto">
         <ScrollReveal direction="up">
           <div className="text-center mb-20 md:mb-24">
             <motion.div
