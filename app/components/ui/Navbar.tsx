@@ -10,16 +10,22 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
+      if (typeof window === "undefined") return;
       setIsVisible(window.scrollY > window.innerHeight * 0.9);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
   }, []);
+
+  const clientInnerHeight =
+    typeof window !== "undefined" ? window.innerHeight : 1000;
 
   const opacity = useTransform(
     scrollY,
-    [window.innerHeight * 0.9, window.innerHeight * 1.1],
+    [clientInnerHeight * 0.9, clientInnerHeight * 1.1],
     [0, 1]
   );
 
