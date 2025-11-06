@@ -25,6 +25,11 @@ body {
   background-color: #000;
   color: #fff;
   overflow-x: hidden;
+  position: relative;
+}
+
+section {
+  position: relative;
 }
 
 h1,
@@ -34,6 +39,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-abolition);
+  letter-spacing: -0.02em;
 }
 
 .font-abolition {

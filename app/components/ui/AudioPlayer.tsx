@@ -10,12 +10,39 @@ export function AudioPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
-    setIsMounted(true);
-    const audio = audioRef.current;
-    if (audio) {
-      audio.volume = 0.5;
-    }
+    const timer = setTimeout(() => setIsMounted(true), 100);
+    return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    if (isMounted && audioRef.current) {
+      const audio = audioRef.current;
+      audio.volume = 0.3;
+
+      const playAudio = () => {
+        audio
+          .play()
+          .then(() => setIsPlaying(true))
+          .catch(() => {
+            // Si falla el autoplay, esperamos interacción del usuario
+            document.addEventListener(
+              "click",
+              () => {
+                audio
+                  .play()
+                  .then(() => setIsPlaying(true))
+                  .catch(() => {});
+              },
+              { once: true }
+            );
+          });
+      };
+
+      // Intentar reproducir después de un pequeño delay
+      const playTimeout = setTimeout(playAudio, 500);
+      return () => clearTimeout(playTimeout);
+    }
+  }, [isMounted]);
 
   const togglePlay = () => {
     const audio = audioRef.current;
@@ -40,24 +67,27 @@ export function AudioPlayer() {
       <motion.button
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 1, duration: 0.5 }}
+        transition={{ delay: 1.5, duration: 0.5 }}
         onClick={togglePlay}
         className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 group"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
       >
         <div className="relative">
           <motion.div
             animate={{
-              scale: isPlaying ? [1, 1.2, 1] : 1,
+              scale: isPlaying ? [1, 1.3, 1] : 1,
+              opacity: isPlaying ? [0.3, 0.6, 0.3] : 0.2,
             }}
             transition={{
               duration: 2,
               repeat: isPlaying ? Infinity : 0,
               ease: "easeInOut",
             }}
-            className="absolute inset-0 bg-green-400/20 rounded-full blur-xl"
+            className="absolute inset-0 bg-green-400 rounded-full blur-xl -m-2"
           />
 
-          <div className="relative bg-black border-2 border-green-400 rounded-full p-3 md:p-4 hover:bg-green-400/10 transition-all duration-300">
+          <div className="relative bg-black border-2 border-green-400 rounded-full p-4 md:p-5 hover:bg-green-400/10 transition-all duration-300 shadow-lg shadow-green-400/20">
             <AnimatePresence mode="wait">
               {isPlaying ? (
                 <motion.div
@@ -67,7 +97,7 @@ export function AudioPlayer() {
                   exit={{ scale: 0, rotate: 180 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <Volume2 className="w-5 h-5 md:w-6 md:h-6 text-green-400" />
+                  <Volume2 className="w-6 h-6 md:w-7 md:h-7 text-green-400" />
                 </motion.div>
               ) : (
                 <motion.div
@@ -77,7 +107,7 @@ export function AudioPlayer() {
                   exit={{ scale: 0, rotate: 180 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <VolumeX className="w-5 h-5 md:w-6 md:h-6 text-green-400" />
+                  <VolumeX className="w-6 h-6 md:w-7 md:h-7 text-green-400" />
                 </motion.div>
               )}
             </AnimatePresence>

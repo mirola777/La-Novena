@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Instagram, Music2 } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";
 import { ARTISTS } from "../../constants/data";
@@ -10,24 +11,67 @@ import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function ArtistsSection() {
   return (
-    <section className="bg-black">
-      <div className="min-h-screen flex items-center justify-center py-20">
-        <ScrollReveal direction="up">
-          <div className="text-center px-4">
-            <h2 className="text-6xl md:text-8xl lg:text-9xl font-teko font-black text-white mb-6 tracking-tight">
-              LINE<span className="text-green-400">UP</span>
-            </h2>
-            <p className="text-xl md:text-2xl text-gray-400 font-light">
-              Los artistas que van a hacer historia
-            </p>
-          </div>
-        </ScrollReveal>
+    <section className="bg-black py-20">
+      <div className="min-h-screen flex items-center justify-center py-20 px-4">
+        <div className="max-w-7xl mx-auto w-full">
+          <ScrollReveal direction="up">
+            <div className="text-center px-4">
+              <motion.h2
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1.2 }}
+                viewport={{ once: true }}
+                className="text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white mb-6 tracking-tight"
+              >
+                LINE<span className="text-green-400">UP</span>
+              </motion.h2>
+              <p className="text-xl md:text-3xl text-gray-400 font-light">
+                Los artistas que van a hacer historia
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
       </div>
 
       {ARTISTS.map((artist, index) => (
-        <ArtistCard key={artist.id} artist={artist} index={index} />
+        <div key={artist.id}>
+          <ArtistCard artist={artist} index={index} />
+          {index < ARTISTS.length - 1 && <ArtistDivider />}
+        </div>
       ))}
     </section>
+  );
+}
+
+function ArtistDivider() {
+  return (
+    <div className="relative h-32 md:h-40 overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="absolute inset-0 bg-linear-to-b from-black via-gray-900 to-black"
+      />
+      <motion.div
+        initial={{ scaleY: 0 }}
+        whileInView={{ scaleY: 1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+        viewport={{ once: true }}
+        className="absolute left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-green-400/50 to-transparent transform -translate-x-1/2"
+      />
+      <motion.div
+        animate={{
+          y: ["-100%", "100%"],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        className="absolute left-1/2 w-2 h-20 bg-linear-to-b from-transparent via-green-400 to-transparent transform -translate-x-1/2 blur-sm"
+      />
+    </div>
   );
 }
 
@@ -42,10 +86,11 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
   const scale = useTransform(
     scrollYProgress,
     [0, 0.3, 0.7, 1],
-    [0.8, 1, 1, 0.8]
+    [0.7, 1, 1, 0.7]
   );
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
   const backgroundY = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const rotate = useTransform(scrollYProgress, [0, 1], [-5, 5]);
 
   return (
     <motion.div
@@ -58,73 +103,162 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
           src="/assets/background.png"
           alt=""
           fill
-          className="object-cover object-center opacity-30 no-select"
+          className="object-cover object-center opacity-20 no-select"
           quality={100}
         />
+        <div className="absolute inset-0 bg-linear-to-b from-black via-transparent to-black" />
       </motion.div>
 
       <ParallaxSection
         speed={0.4}
         className="absolute inset-0 pointer-events-none"
       >
-        <div className="absolute top-1/4 right-1/4 w-px h-32 bg-linear-to-b from-green-400/40 to-transparent" />
-        <div className="absolute bottom-1/3 left-1/5 w-px h-24 bg-linear-to-t from-white/20 to-transparent" />
-        <div className="absolute top-1/3 left-1/3 w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+        <motion.div
+          animate={{
+            opacity: [0.2, 0.5, 0.2],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute top-1/4 right-1/4 w-96 h-96 bg-green-400/10 rounded-full blur-3xl"
+        />
+        <motion.div
+          animate={{
+            opacity: [0.1, 0.3, 0.1],
+            scale: [1, 1.3, 1],
+          }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
+          className="absolute bottom-1/3 left-1/5 w-96 h-96 bg-white/5 rounded-full blur-3xl"
+        />
       </ParallaxSection>
 
-      <div className="max-w-5xl mx-auto w-full text-center relative z-10">
-        <motion.div style={{ y, scale }} className="space-y-6 md:space-y-8">
+      <div className="max-w-6xl mx-auto w-full text-center relative z-10">
+        <motion.div
+          style={{ y, scale, rotate }}
+          className="space-y-6 md:space-y-10"
+        >
           <div className="relative">
-            <div className="text-7xl md:text-8xl lg:text-9xl font-teko font-black text-green-400/10 absolute -top-12 md:-top-16 left-1/2 transform -translate-x-1/2 pointer-events-none select-none">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 0.08 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="text-[10rem] md:text-[15rem] lg:text-[20rem] font-abolition font-black text-green-400 absolute -top-20 md:-top-32 lg:-top-40 left-1/2 transform -translate-x-1/2 pointer-events-none select-none leading-none"
+            >
               {(index + 1).toString().padStart(2, "0")}
-            </div>
+            </motion.div>
 
-            <div className="flex items-center justify-center gap-4 md:gap-6 mb-4">
-              <h3 className="text-4xl md:text-6xl lg:text-8xl font-teko font-black text-white tracking-tight">
+            <div className="flex items-center justify-center gap-4 md:gap-8 mb-4 flex-wrap">
+              <motion.h3
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-5xl md:text-7xl lg:text-9xl font-abolition font-black text-white tracking-tight"
+              >
                 {artist.name}
-              </h3>
-              <Image
-                src={
-                  artist.event === "AM" ? "/assets/AM.png" : "/assets/808.png"
-                }
-                alt={artist.event}
-                width={60}
-                height={60}
-                className="w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 object-contain no-select"
-              />
+              </motion.h3>
+              <motion.div
+                initial={{ scale: 0, rotate: -180 }}
+                whileInView={{ scale: 1, rotate: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.2, rotate: 360 }}
+              >
+                <Image
+                  src={
+                    artist.event === "AM" ? "/assets/AM.png" : "/assets/808.png"
+                  }
+                  alt={artist.event}
+                  width={80}
+                  height={80}
+                  className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain no-select"
+                />
+              </motion.div>
             </div>
           </div>
-
-          <div className="inline-block px-6 py-2 border border-green-400/50 rounded-full">
-            <span className="text-sm md:text-base lg:text-lg text-green-400 uppercase tracking-[0.3em] font-bold">
-              {artist.genre}
-            </span>
-          </div>
-
-          <p className="text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light px-4">
-            {artist.description}
-          </p>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
-            className="relative w-48 h-48 md:w-64 md:h-64 mx-auto mt-8 overflow-hidden rounded-2xl"
+            className="inline-block px-10 py-4 border-2 border-green-400/50 rounded-full bg-green-400/5 backdrop-blur-sm"
           >
-            <Image
-              src="/assets/background.png"
-              alt={artist.name}
-              fill
-              className="object-cover object-center no-select"
-            />
-            <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent" />
+            <span className="text-base md:text-lg lg:text-xl text-green-400 uppercase tracking-[0.2em] font-bold">
+              {artist.genre}
+            </span>
+          </motion.div>
+
+          <motion.p
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light px-6 md:px-8"
+          >
+            {artist.description}
+          </motion.p>
+
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="flex items-center justify-center gap-4 md:gap-6 mt-8 flex-wrap px-4"
+          >
+            <motion.a
+              href={artist.spotify}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center gap-3 px-8 py-4 bg-green-400 text-black rounded-full font-bold hover:bg-green-300 transition-colors duration-300 shadow-lg shadow-green-400/30"
+            >
+              <Music2 className="w-5 h-5 shrink-0" />
+              <span className="whitespace-nowrap">Spotify</span>
+            </motion.a>
+            <motion.a
+              href={artist.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center gap-3 px-8 py-4 bg-linear-to-r from-purple-500 to-pink-500 text-white rounded-full font-bold hover:from-purple-400 hover:to-pink-400 transition-all duration-300 shadow-lg shadow-purple-500/30"
+            >
+              <Instagram className="w-5 h-5 shrink-0" />
+              <span className="whitespace-nowrap">Instagram</span>
+            </motion.a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.6, duration: 1 }}
+            viewport={{ once: true }}
+            className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto mt-12 overflow-hidden rounded-2xl group"
+          >
+            <div className="relative w-full h-full">
+              <Image
+                src="/assets/background.png"
+                alt={artist.name}
+                fill
+                className="object-cover object-center no-select transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent" />
+              <div className="absolute inset-0 border-2 border-green-400/30 group-hover:border-green-400/60 transition-colors duration-300" />
+            </div>
           </motion.div>
         </motion.div>
       </div>
-
-      <div className="absolute left-4 md:left-12 top-1/2 transform -translate-y-1/2 w-px h-32 bg-linear-to-b from-transparent via-green-400/50 to-transparent pointer-events-none" />
-      <div className="absolute right-4 md:right-12 top-1/2 transform -translate-y-1/2 w-px h-32 bg-linear-to-b from-transparent via-white/30 to-transparent pointer-events-none" />
     </motion.div>
   );
 }

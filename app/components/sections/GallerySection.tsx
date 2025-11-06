@@ -14,47 +14,96 @@ export function GallerySection() {
     { title: "Community Spirit", description: "La familia que construimos" },
   ];
 
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const backgroundY = useTransform(scrollYProgress, [0, 1], [0, -150]);
+
   return (
-    <section className="py-20 md:py-32 px-4 md:px-6 bg-black relative overflow-hidden">
-      <ParallaxSection
-        speed={0.3}
-        className="absolute inset-0 opacity-20 pointer-events-none"
-      >
-        <Image
-          src="/assets/background.png"
-          alt=""
-          fill
-          className="object-cover object-center no-select"
-        />
-      </ParallaxSection>
+    <section
+      ref={sectionRef}
+      className="py-32 md:py-40 px-6 md:px-10 lg:px-16 bg-black relative overflow-hidden"
+    >
+      <motion.div style={{ y: backgroundY }} className="absolute inset-0">
+        <ParallaxSection speed={0.3} className="absolute inset-0 opacity-20">
+          <Image
+            src="/assets/background.png"
+            alt=""
+            fill
+            className="object-cover object-center no-select"
+          />
+        </ParallaxSection>
+        <div className="absolute inset-0 bg-linear-to-b from-black via-transparent to-black" />
+      </motion.div>
+
+      <motion.div
+        animate={{
+          opacity: [0.05, 0.15, 0.05],
+          scale: [1, 1.3, 1],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-green-400/10 rounded-full blur-3xl pointer-events-none"
+      />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <ScrollReveal direction="up">
-          <div className="text-center mb-16 md:mb-20">
-            <h2 className="text-6xl md:text-8xl lg:text-9xl font-teko font-black text-white mb-4 md:mb-6 tracking-tight">
+          <div className="text-center mb-20 md:mb-28 px-4">
+            <motion.h2
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1.2 }}
+              viewport={{ once: true }}
+              className="text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white mb-6 tracking-tight"
+            >
               GALE<span className="text-green-400">RÍA</span>
-            </h2>
-            <p className="text-lg md:text-xl text-gray-400 font-light">
+            </motion.h2>
+            <motion.p
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-2xl md:text-3xl text-gray-400 font-light"
+            >
               Los momentos que marcaron historia
-            </p>
+            </motion.p>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14">
           {galleryItems.map((item, index) => (
             <GalleryCard key={index} item={item} index={index} />
           ))}
         </div>
 
         <ScrollReveal delay={0.8}>
-          <div className="text-center mt-16 md:mt-20">
-            <div className="text-2xl md:text-3xl font-teko font-bold text-green-400 mb-4">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="text-center mt-20 md:mt-28 p-10 border-2 border-green-400/30 rounded-2xl bg-linear-to-br from-green-400/5 to-transparent backdrop-blur-sm"
+          >
+            <motion.div
+              animate={{
+                scale: [1, 1.2, 1],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="text-4xl md:text-5xl font-abolition font-bold text-green-400 mb-4"
+            >
               #LaNovena1
-            </div>
-            <p className="text-gray-400 font-light">
+            </motion.div>
+            <p className="text-xl md:text-2xl text-gray-400 font-light">
               Comparte tu experiencia y forma parte de la historia
             </p>
-          </div>
+          </motion.div>
         </ScrollReveal>
       </div>
     </section>
@@ -73,39 +122,81 @@ function GalleryCard({ item, index }: { item: GalleryItem; index: number }) {
     offset: ["start end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
+  const y = useTransform(scrollYProgress, [0, 1], [80, -80]);
   const opacity = useTransform(
     scrollYProgress,
     [0, 0.3, 0.7, 1],
-    [0, 1, 1, 0.5]
+    [0, 1, 1, 0.3]
   );
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1, 0.95]);
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1, 0.9]);
+  const rotate = useTransform(
+    scrollYProgress,
+    [0, 0.5, 1],
+    [index % 2 === 0 ? -3 : 3, 0, index % 2 === 0 ? 3 : -3]
+  );
 
   return (
-    <ScrollReveal delay={index * 0.15}>
-      <motion.div ref={ref} style={{ opacity, scale }} className="group">
+    <ScrollReveal delay={index * 0.2}>
+      <motion.div
+        ref={ref}
+        style={{ opacity, scale, rotate }}
+        className="group"
+      >
         <motion.div
           style={{ y }}
-          className="relative overflow-hidden rounded-lg"
+          whileHover={{ scale: 1.05, rotate: 0 }}
+          transition={{ duration: 0.4 }}
+          className="relative overflow-hidden rounded-2xl"
         >
-          <div className="relative w-full aspect-video overflow-hidden">
-            <Image
-              src="/assets/background.png"
-              alt={item.title}
-              fill
-              className="object-cover object-center no-select transition-transform duration-700 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-linear-to-t from-black via-black/60 to-transparent" />
-            <div className="absolute inset-0 border border-green-400/30 group-hover:border-green-400/60 transition-colors duration-300" />
-          </div>
+          <motion.div
+            animate={{
+              opacity: [0, 0.5, 0],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: index * 0.5,
+            }}
+            className="absolute -inset-1 bg-linear-to-r from-green-400/40 to-green-600/40 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          />
 
-          <div className="absolute bottom-0 left-0 right-0 p-6">
-            <h3 className="text-xl md:text-2xl font-teko font-bold text-white mb-2 tracking-wide">
-              {item.title}
-            </h3>
-            <p className="text-sm md:text-base text-gray-300 font-light">
-              {item.description}
-            </p>
+          <div className="relative w-full aspect-video overflow-hidden">
+            <motion.div
+              whileHover={{ scale: 1.15 }}
+              transition={{ duration: 0.6 }}
+            >
+              <Image
+                src="/assets/background.png"
+                alt={item.title}
+                fill
+                className="object-cover object-center no-select"
+              />
+            </motion.div>
+            <div className="absolute inset-0 bg-linear-to-t from-black via-black/70 to-transparent" />
+            <motion.div
+              className="absolute inset-0 border-2 border-green-400/20 group-hover:border-green-400/70 transition-colors duration-500"
+              whileHover={{
+                boxShadow: "0 0 40px rgba(34, 197, 94, 0.3)",
+              }}
+            />
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 + 0.3, duration: 0.6 }}
+              viewport={{ once: true }}
+              className="absolute inset-0 flex items-end"
+            >
+              <div className="p-8 w-full">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-abolition font-bold text-white mb-3 tracking-wide">
+                  {item.title}
+                </h3>
+                <p className="text-base md:text-lg text-gray-300 font-light">
+                  {item.description}
+                </p>
+              </div>
+            </motion.div>
           </div>
         </motion.div>
       </motion.div>
