@@ -39,8 +39,8 @@ export function Navbar() {
       style={{ opacity }}
       className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-2xl border-b-2 border-green-400/30 shadow-lg shadow-black/50"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-6 md:py-7">
-        <div className="flex items-center justify-center gap-8 md:gap-16 lg:gap-24">
+      <div className="mx-auto px-6 md:px-10 lg:px-16 py-6 md:py-7  w-full">
+        <div className="flex items-center justify-between px-10">
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}

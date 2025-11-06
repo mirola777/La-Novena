@@ -15,7 +15,7 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-[200vh] flex items-start justify-center overflow-hidden">
-      <div className="sticky top-0 w-full h-screen flex items-center justify-center">
+      <div className="sticky top-0 w-full h-screen flex items-center justify-center bg-amber-50">
         <ParallaxSection speed={0.3} className="absolute inset-0">
           <motion.div
             style={{ y: backgroundY, scale: backgroundScale }}
@@ -40,13 +40,13 @@ export function HeroSection() {
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
-              className="flex flex-col items-center lg:items-start justify-center space-y-8"
+              className="flex flex-col items-center lg:items-center   justify-center space-y-8"
             >
               <motion.div
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.8 }}
-                className="w-full flex justify-center lg:justify-start"
+                className="w-fit flex justify-center lg:justify-start"
               >
                 <Image
                   src="/assets/808xAM.png"
@@ -103,7 +103,7 @@ export function HeroSection() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 1.5 }}
-                  className="mb-8 md:mb-12 text-center lg:text-left"
+                  className="mb-8 md:mb-12 text-center py-3 h-fit"
                 >
                   <h1 className="text-2xl md:text-3xl lg:text-4xl font-abolition text-white mb-2">
                     CUENTA REGRESIVA
