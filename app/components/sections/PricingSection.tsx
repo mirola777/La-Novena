@@ -21,7 +21,7 @@ export function PricingSection() {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen py-32 md:py-40 px-6 md:px-12 lg:px-20 bg-black relative overflow-hidden flex items-center justify-center"
+      className="min-h-screen py-32 md:py-40 px-6 md:px-12 lg:px-20 bg-black relative overflow-hidden flex flex-col items-center justify-center"
     >
       <motion.div style={{ y: backgroundY }} className="absolute inset-0">
         <ParallaxSection speed={0.4} className="absolute inset-0 opacity-30">
@@ -62,10 +62,10 @@ export function PricingSection() {
         className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-green-400/10 rounded-full blur-3xl pointer-events-none"
       />
 
-      <div className="max-w-7xl mx-auto relative z-10 w-full">
+      <div className="max-w-7xl mx-auto relative z-10 w-full flex flex-col items-center justify-center">
         <motion.div style={{ scale }}>
           <ScrollReveal direction="up">
-            <div className="text-center mb-24 md:mb-32">
+            <div className="text-center mb-24 md:mb-32 space-y-8">
               <motion.div
                 initial={{ scale: 0.5, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
@@ -84,7 +84,7 @@ export function PricingSection() {
                   }}
                   className="absolute -inset-8 bg-linear-to-r from-green-400/20 via-transparent to-green-400/20 rounded-full blur-xl"
                 />
-                <h2 className="relative text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white mb-8 tracking-tight">
+                <h2 className="relative text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white tracking-tight">
                   PRE<span className="text-green-400">CIOS</span>
                 </h2>
               </motion.div>
@@ -93,7 +93,7 @@ export function PricingSection() {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.8 }}
                 viewport={{ once: true }}
-                className="text-2xl md:text-3xl text-gray-400 font-light flex items-center justify-center gap-3"
+                className="text-2xl md:text-3xl text-gray-400 font-light flex items-center justify-center gap-3 flex-wrap"
               >
                 <Sparkles className="w-6 h-6 text-green-400" />
                 Granizados, carnita y música decembrina
@@ -162,7 +162,7 @@ function PricingCard({ item, index }: { item: PricingItem; index: number }) {
         ref={ref}
         style={{ opacity, y, scale }}
         whileHover={{ scale: 1.05, y: -10 }}
-        className="relative group h-full"
+        className="relative group h-full flex items-center justify-center"
       >
         <motion.div
           animate={{
@@ -177,7 +177,7 @@ function PricingCard({ item, index }: { item: PricingItem; index: number }) {
           className="absolute -inset-1 bg-linear-to-r from-green-400/50 to-green-600/50 rounded-2xl blur opacity-30 group-hover:opacity-60 transition-opacity duration-500"
         />
 
-        <div className="relative text-center py-14 md:py-18 px-10 border-2 border-green-400/30 hover:border-green-400/70 transition-all duration-500 rounded-2xl bg-black/80 backdrop-blur-sm overflow-hidden h-full flex flex-col justify-center">
+        <div className="relative text-center py-14 md:py-18 px-10 border-2 border-green-400/30 hover:border-green-400/70 transition-all duration-500 rounded-2xl bg-black/80 backdrop-blur-sm overflow-hidden h-full flex flex-col justify-center items-center space-y-6">
           <motion.div
             className="absolute inset-0 bg-linear-to-br from-green-400/5 via-transparent to-green-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
             animate={{

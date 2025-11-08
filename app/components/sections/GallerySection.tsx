@@ -25,7 +25,7 @@ export function GallerySection() {
   return (
     <section
       ref={sectionRef}
-      className="px-6 md:px-12 lg:px-20 relative overflow-hidden mx-auto justify-center"
+      className="px-6 md:px-12 lg:px-20 relative overflow-hidden flex flex-col items-center justify-center py-32 md:py-40"
     >
       <motion.div style={{ y: backgroundY }} className="absolute inset-0">
         <ParallaxSection speed={0.3} className="absolute inset-0 opacity-20">
@@ -52,15 +52,15 @@ export function GallerySection() {
         className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-green-400/10 rounded-full blur-3xl pointer-events-none"
       />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center justify-center space-y-20 md:space-y-28">
         <ScrollReveal direction="up">
-          <div className="text-center mb-20 md:mb-28">
+          <div className="text-center space-y-8 md:space-y-12">
             <motion.h2
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className="text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white mb-8 md:mb-12 tracking-tight"
+              className="text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white tracking-tight"
             >
               GALE<span className="text-green-400">RÍA</span>
             </motion.h2>
@@ -76,7 +76,7 @@ export function GallerySection() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 lg:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 lg:gap-20 w-full">
           {galleryItems.map((item, index) => (
             <GalleryCard key={index} item={item} index={index} />
           ))}
@@ -85,7 +85,7 @@ export function GallerySection() {
         <ScrollReveal delay={0.8}>
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-center mt-20 md:mt-28 p-10 border-2 border-green-400/30 rounded-2xl bg-linear-to-br from-green-400/5 to-transparent backdrop-blur-sm"
+            className="text-center p-10 border-2 border-green-400/30 rounded-2xl bg-linear-to-br from-green-400/5 to-transparent backdrop-blur-sm"
           >
             <motion.div
               animate={{

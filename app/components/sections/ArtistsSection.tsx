@@ -11,17 +11,17 @@ import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function ArtistsSection() {
   return (
-    <section className="bg-black py-20">
-      <div className="min-h-screen flex items-center justify-center py-20 px-4">
+    <section className="bg-black py-20 flex flex-col items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center py-24 px-6 md:px-8">
         <div className="max-w-7xl mx-auto w-full">
           <ScrollReveal direction="up">
-            <div className="text-center px-4">
+            <div className="text-center px-4 space-y-6">
               <motion.h2
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1.2 }}
                 viewport={{ once: true }}
-                className="text-5xl md:text-6xl lg:text-7xl font-abolition font-black text-white mb-6 tracking-tight"
+                className="text-5xl md:text-6xl lg:text-7xl font-abolition font-black text-white tracking-tight"
               >
                 LINE<span className="text-green-400">UP</span>
               </motion.h2>
@@ -61,7 +61,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
     <motion.div
       ref={ref}
       style={{ opacity }}
-      className="min-h-screen flex items-center justify-center px-4 md:px-6 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center px-6 md:px-8 lg:px-12 relative overflow-hidden py-20"
     >
       <motion.div style={{ y: backgroundY }} className="absolute inset-0">
         <Image
@@ -105,12 +105,12 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
         />
       </ParallaxSection>
 
-      <div className="max-w-6xl mx-auto w-full text-center relative z-10">
+      <div className="max-w-6xl mx-auto w-full text-center relative z-10 flex flex-col items-center justify-center">
         <motion.div
           style={{ y, scale, rotate }}
-          className="space-y-6 md:space-y-10 items-center justify-center flex flex-col"
+          className="flex flex-col items-center justify-center space-y-8 md:space-y-12"
         >
-          <div className="relative">
+          <div className="relative mb-8">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 0.08 }}
@@ -121,7 +121,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
               {(index + 1).toString().padStart(2, "0")}
             </motion.div>
 
-            <div className="flex items-center justify-center gap-4 md:gap-8 mb-4 flex-wrap">
+            <div className="flex items-center justify-center gap-6 md:gap-10 mb-6 flex-wrap">
               <motion.h3
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -156,7 +156,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
-            className="inline-block px-8 py-3 border-2 border-green-400/50 rounded-full bg-green-400/5 backdrop-blur-sm mb-6"
+            className="inline-block px-8 py-3 border-2 border-green-400/50 rounded-full bg-green-400/5 backdrop-blur-sm"
           >
             <span className="text-sm md:text-base lg:text-lg text-green-400 uppercase tracking-[0.3em] font-bold">
               {artist.genre}
@@ -168,7 +168,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light px-6 md:px-8 mb-10"
+            className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light px-6 md:px-8"
           >
             {artist.description}
           </motion.p>
@@ -178,7 +178,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
-            className="flex items-center justify-center gap-6 md:gap-8 mt-8 flex-wrap px-4"
+            className="flex items-center justify-center gap-6 md:gap-8 flex-wrap px-4"
           >
             <motion.a
               href={artist.spotify}

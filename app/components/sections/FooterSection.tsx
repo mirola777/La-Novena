@@ -7,7 +7,7 @@ import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function FooterSection() {
   return (
-    <footer className="relative py-32 md:py-40 px-6 md:px-10 lg:px-16 bg-black overflow-hidden">
+    <footer className="relative py-32 md:py-40 px-6 md:px-10 lg:px-16 bg-black overflow-hidden flex flex-col items-center justify-center">
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <Image
           src="/assets/background.png"
@@ -17,19 +17,19 @@ export function FooterSection() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto">
+      <div className="relative z-10 mx-auto max-w-7xl w-full flex flex-col items-center justify-center space-y-20 md:space-y-24">
         <ScrollReveal direction="up">
-          <div className="text-center mb-20 md:mb-24">
+          <div className="text-center space-y-16">
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.5 }}
-              className="mb-16"
+              className="space-y-6 md:space-y-10"
             >
-              <h2 className="text-7xl md:text-8xl lg:text-9xl font-abolition font-black text-white mb-6 md:mb-10 tracking-tight">
+              <h2 className="text-7xl md:text-8xl lg:text-9xl font-abolition font-black text-white tracking-tight">
                 6 DE DICIEMBRE
               </h2>
-              <div className="text-5xl md:text-6xl lg:text-7xl font-abolition font-black text-green-400 mb-6 md:mb-8">
+              <div className="text-5xl md:text-6xl lg:text-7xl font-abolition font-black text-green-400">
                 2025
               </div>
               <div className="text-2xl md:text-3xl lg:text-4xl text-gray-400 font-light tracking-widest">
@@ -41,13 +41,13 @@ export function FooterSection() {
               whileHover={{ scale: 1.02 }}
               className="inline-block p-8 md:p-10 border border-green-400/50 rounded-lg bg-green-400/5 mx-auto"
             >
-              <div className="mb-8">
+              <div className="mb-8 flex justify-center">
                 <Image
                   src="/assets/lanovena.png"
                   alt="La Novena-1"
                   width={500}
                   height={140}
-                  className="w-auto h-24 md:h-28 object-contain mx-auto no-select"
+                  className="w-auto h-24 md:h-28 object-contain no-select"
                 />
               </div>
               <div className="text-xl md:text-2xl text-gray-300 mb-8">
@@ -72,19 +72,19 @@ export function FooterSection() {
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={0.3}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-16 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 max-w-5xl mx-auto w-full">
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="text-center p-8 border border-green-400/30 rounded-lg bg-black/50"
+              className="text-center p-8 border border-green-400/30 rounded-lg bg-black/50 flex flex-col items-center justify-center space-y-6"
             >
               <Image
                 src="/assets/AM.png"
                 alt="Asado Místico"
                 width={90}
                 height={90}
-                className="w-20 h-20 object-contain mx-auto mb-6 no-select filter-none"
+                className="w-20 h-20 object-contain no-select filter-none"
               />
-              <h3 className="text-2xl md:text-3xl font-abolition font-bold text-white mb-4">
+              <h3 className="text-2xl md:text-3xl font-abolition font-bold text-white">
                 Asado Místico
               </h3>
               <p className="text-gray-400 text-base md:text-lg">
@@ -95,16 +95,16 @@ export function FooterSection() {
 
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="text-center p-8 border border-green-400/30 rounded-lg bg-black/50"
+              className="text-center p-8 border border-green-400/30 rounded-lg bg-black/50 flex flex-col items-center justify-center space-y-6"
             >
               <Image
                 src="/assets/808.png"
                 alt="808 Fest"
                 width={90}
                 height={90}
-                className="w-20 h-20 object-contain mx-auto mb-6 no-select filter-none"
+                className="w-20 h-20 object-contain no-select filter-none"
               />
-              <h3 className="text-2xl md:text-3xl font-abolition font-bold text-white mb-4">
+              <h3 className="text-2xl md:text-3xl font-abolition font-bold text-white">
                 808 Fest
               </h3>
               <p className="text-gray-400 text-base md:text-lg">
@@ -115,19 +115,19 @@ export function FooterSection() {
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={0.5}>
-          <div className="text-center border-t border-gray-800 pt-12 md:pt-16">
-            <div className="mb-12">
+          <div className="text-center border-t border-gray-800 pt-12 md:pt-16 flex flex-col items-center justify-center space-y-12">
+            <div className="flex justify-center">
               <Image
                 src="/assets/logos.png"
                 alt="Patrocinadores"
                 width={800}
                 height={100}
-                className="w-auto h-16 md:h-20 object-contain mx-auto no-select filter-none opacity-90"
+                className="w-auto h-16 md:h-20 object-contain no-select filter-none opacity-90"
               />
             </div>
 
-            <div className="mb-10">
-              <div className="text-3xl md:text-4xl font-abolition font-black text-green-400 mb-4">
+            <div className="space-y-4">
+              <div className="text-3xl md:text-4xl font-abolition font-black text-green-400">
                 #LaNovena1
               </div>
               <p className="text-gray-400 text-lg md:text-xl">
@@ -135,10 +135,8 @@ export function FooterSection() {
               </p>
             </div>
 
-            <div className="text-gray-500 text-sm md:text-base mb-8">
-              <p className="mb-3">
-                © 2025 La Novena-1 • Asado Místico × 808 Fest
-              </p>
+            <div className="text-gray-500 text-sm md:text-base space-y-3">
+              <p>© 2025 La Novena-1 • Asado Místico × 808 Fest</p>
               <p>Medellín, Colombia • Underground Culture</p>
             </div>
 

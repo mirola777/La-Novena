@@ -4,47 +4,53 @@ import { EVENT_DATE } from "@/app/constants/data";
 import { useCountdown } from "@/app/hooks/useCountdown";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { ParallaxSection } from "../ui/ParallaxSection";
+import { useRef } from "react";
 
 export function HeroSection() {
   const timeLeft = useCountdown(EVENT_DATE);
-  const { scrollYProgress } = useScroll();
+  const containerRef = useRef(null);
 
-  const backgroundY = useTransform(scrollYProgress, [0, 0.5], [0, 300]);
-  const backgroundScale = useTransform(scrollYProgress, [0, 0.5], [1, 1.3]);
-  const contentOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
-  const contentY = useTransform(scrollYProgress, [0, 0.3], [0, -100]);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+
+  const backgroundY = useTransform(scrollYProgress, [0, 1], [0, 150]);
+  const backgroundScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0]);
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, -200]);
+  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.6, 0.9]);
 
   return (
-    <section className="relative min-h-[200vh] flex items-start justify-center overflow-hidden">
-      <div className="sticky top-0 w-full h-screen flex items-center justify-center ">
-        <ParallaxSection speed={0.3} className="absolute inset-0">
+    <section ref={containerRef} className="relative h-[400vh] flex flex-col">
+      <div className="sticky top-0 w-full h-screen flex items-center justify-center overflow-hidden">
+        <motion.div
+          style={{ y: backgroundY, scale: backgroundScale }}
+          className="absolute inset-0"
+        >
+          <Image
+            src="/assets/background.png"
+            alt="La Novena-1"
+            fill
+            className="object-cover object-center no-select"
+            priority
+          />
           <motion.div
-            style={{ y: backgroundY, scale: backgroundScale }}
-            className="absolute inset-0"
-          >
-            <Image
-              src="/assets/background.png"
-              alt="La Novena-1"
-              fill
-              className="object-cover object-center no-select"
-              priority
-            />
-            <div className="absolute inset-0 bg-black/60" />
-          </motion.div>
-        </ParallaxSection>
+            style={{ opacity: overlayOpacity }}
+            className="absolute inset-0 bg-black"
+          />
+        </motion.div>
 
-        <div className="relative z-10 w-full h-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 py-12 md:py-16">
+        <div className="relative z-10 w-full h-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 py-12 md:py-16 flex flex-col">
           <motion.div
             style={{ opacity: contentOpacity, y: contentY }}
-            className="h-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+            className="h-full flex flex-col lg:flex-row gap-12 items-center justify-center"
           >
-            {/* Columna Izquierda - Logo La Novena */}
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
-              className="flex flex-col items-center lg:items-center   justify-center space-y-8"
+              className="flex flex-col items-center lg:items-center justify-center space-y-8"
             >
               <motion.div
                 initial={{ opacity: 0, y: -30 }}
@@ -57,7 +63,7 @@ export function HeroSection() {
                   alt="808 x Asado Místico"
                   width={250}
                   height={65}
-                  className="w-auto h-14 md:h-16 lg:h-18 object-contain no-select opacity-90"
+                  className="w-auto h-14 md:h-16 lg:h-20 object-contain no-select opacity-90"
                   priority
                 />
               </motion.div>
@@ -95,34 +101,33 @@ export function HeroSection() {
               </motion.div>
             </motion.div>
 
-            {/* Columna Derecha - Countdown */}
             <motion.div
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.5, ease: "easeOut", delay: 0.7 }}
               className="flex items-center justify-center"
             >
-              <div className="w-full max-w-2xl">
+              <div className="w-full max-w-3xl flex flex-col items-center justify-center">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 1.5 }}
-                  className="mb-8 md:mb-12 text-center py-3 h-fit"
+                  className="mb-12 md:mb-16 text-center"
                 >
-                  <h1 className="text-2xl md:text-3xl lg:text-4xl font-abolition text-white mb-2">
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-abolition text-white mb-3">
                     CUENTA REGRESIVA
                   </h1>
-                  <p className="text-green-400 text-lg md:text-xl font-light">
+                  <p className="text-green-400 text-xl md:text-2xl font-light">
                     6 de Diciembre, 2025
                   </p>
                 </motion.div>
 
-                <div className="flex items-center justify-center gap-3 md:gap-4 lg:gap-6 flex-wrap">
+                <div className="flex items-center justify-center gap-4 md:gap-6 lg:gap-8 flex-wrap">
                   <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 1.8 }}
-                    className="flex items-center gap-2"
+                    className="flex flex-col items-center gap-3"
                   >
                     <motion.div
                       animate={{
@@ -133,16 +138,16 @@ export function HeroSection() {
                         repeat: Infinity,
                         ease: "easeInOut",
                       }}
-                      className="text-4xl md:text-5xl lg:text-6xl font-abolition font-black text-white"
+                      className="text-6xl md:text-7xl lg:text-8xl font-abolition font-black text-white"
                     >
                       {timeLeft.days.toString().padStart(2, "0")}
                     </motion.div>
-                    <div className="text-xs md:text-sm text-green-400 uppercase tracking-wider font-bold">
-                      D
+                    <div className="text-sm md:text-base text-green-400 uppercase tracking-wider font-bold">
+                      DÍAS
                     </div>
                   </motion.div>
 
-                  <div className="text-3xl md:text-4xl lg:text-5xl font-abolition text-green-400">
+                  <div className="text-5xl md:text-6xl lg:text-7xl font-abolition text-green-400">
                     :
                   </div>
 
@@ -150,7 +155,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 2 }}
-                    className="flex items-center gap-2"
+                    className="flex flex-col items-center gap-3"
                   >
                     <motion.div
                       animate={{
@@ -162,16 +167,16 @@ export function HeroSection() {
                         ease: "easeInOut",
                         delay: 0.3,
                       }}
-                      className="text-4xl md:text-5xl lg:text-6xl font-abolition font-black text-white"
+                      className="text-6xl md:text-7xl lg:text-8xl font-abolition font-black text-white"
                     >
                       {timeLeft.hours.toString().padStart(2, "0")}
                     </motion.div>
-                    <div className="text-xs md:text-sm text-green-400 uppercase tracking-wider font-bold">
-                      H
+                    <div className="text-sm md:text-base text-green-400 uppercase tracking-wider font-bold">
+                      HORAS
                     </div>
                   </motion.div>
 
-                  <div className="text-3xl md:text-4xl lg:text-5xl font-abolition text-green-400">
+                  <div className="text-5xl md:text-6xl lg:text-7xl font-abolition text-green-400">
                     :
                   </div>
 
@@ -179,7 +184,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 2.2 }}
-                    className="flex items-center gap-2"
+                    className="flex flex-col items-center gap-3"
                   >
                     <motion.div
                       animate={{
@@ -191,16 +196,16 @@ export function HeroSection() {
                         ease: "easeInOut",
                         delay: 0.6,
                       }}
-                      className="text-4xl md:text-5xl lg:text-6xl font-abolition font-black text-white"
+                      className="text-6xl md:text-7xl lg:text-8xl font-abolition font-black text-white"
                     >
                       {timeLeft.minutes.toString().padStart(2, "0")}
                     </motion.div>
-                    <div className="text-xs md:text-sm text-green-400 uppercase tracking-wider font-bold">
-                      M
+                    <div className="text-sm md:text-base text-green-400 uppercase tracking-wider font-bold">
+                      MINUTOS
                     </div>
                   </motion.div>
 
-                  <div className="text-3xl md:text-4xl lg:text-5xl font-abolition text-green-400">
+                  <div className="text-5xl md:text-6xl lg:text-7xl font-abolition text-green-400">
                     :
                   </div>
 
@@ -208,7 +213,7 @@ export function HeroSection() {
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 2.4 }}
-                    className="flex items-center gap-2"
+                    className="flex flex-col items-center gap-3"
                   >
                     <motion.div
                       animate={{
@@ -219,12 +224,12 @@ export function HeroSection() {
                         repeat: Infinity,
                         ease: "easeInOut",
                       }}
-                      className="text-4xl md:text-5xl lg:text-6xl font-abolition font-black text-green-400"
+                      className="text-6xl md:text-7xl lg:text-8xl font-abolition font-black text-green-400"
                     >
                       {timeLeft.seconds.toString().padStart(2, "0")}
                     </motion.div>
-                    <div className="text-xs md:text-sm text-green-400 uppercase tracking-wider font-bold">
-                      S
+                    <div className="text-sm md:text-base text-green-400 uppercase tracking-wider font-bold">
+                      SEGUNDOS
                     </div>
                   </motion.div>
                 </div>
@@ -237,17 +242,15 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 2.6 }}
-            className="absolute bottom-8 md:bottom-12 left-0 right-0 px-6 md:px-12"
+            className="absolute bottom-8 md:bottom-12 left-0 right-0 px-6 md:px-12 flex justify-center"
           >
-            <div className="flex justify-center">
-              <Image
-                src="/assets/logos.png"
-                alt="Patrocinadores"
-                width={800}
-                height={100}
-                className="w-auto h-10 md:h-12 lg:h-16 object-contain no-select"
-              />
-            </div>
+            <Image
+              src="/assets/logos.png"
+              alt="Patrocinadores"
+              width={800}
+              height={100}
+              className="w-auto h-10 md:h-12 lg:h-16 object-contain no-select"
+            />
           </motion.div>
 
           <motion.div

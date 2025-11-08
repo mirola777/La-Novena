@@ -20,7 +20,7 @@ export function LocationSection() {
   return (
     <section
       ref={ref}
-      className="min-h-screen py-32 md:py-40 px-6 md:px-12 lg:px-20 bg-black relative overflow-hidden flex items-center justify-center"
+      className="min-h-screen py-32 md:py-40 px-6 md:px-12 lg:px-20 bg-black relative overflow-hidden flex flex-col items-center justify-center"
     >
       <motion.div style={{ y: backgroundY }} className="absolute inset-0">
         <ParallaxSection speed={0.5} className="absolute inset-0 opacity-20">
@@ -47,15 +47,15 @@ export function LocationSection() {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-green-400/10 rounded-full blur-3xl pointer-events-none"
       />
 
-      <div className="max-w-7xl mx-auto relative z-10 w-full">
+      <div className="max-w-7xl mx-auto relative z-10 w-full flex flex-col items-center justify-center space-y-24 md:space-y-32">
         <ScrollReveal direction="up">
-          <div className="text-center mb-24 md:mb-32">
+          <div className="text-center space-y-8">
             <motion.h2
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className="text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white mb-8 tracking-tight"
+              className="text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white tracking-tight"
             >
               UBICA<span className="text-green-400">CION</span>
             </motion.h2>
@@ -71,8 +71,11 @@ export function LocationSection() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-24 items-center">
-          <motion.div style={{ y }} className="space-y-12 md:space-y-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-24 items-center w-full">
+          <motion.div
+            style={{ y }}
+            className="flex flex-col space-y-12 md:space-y-14"
+          >
             <ScrollReveal direction="left">
               <motion.div
                 whileHover={{ scale: 1.05, x: 10 }}

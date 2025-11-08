@@ -11,7 +11,7 @@ export function SpotifySection() {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen py-32 md:py-40 px-6 md:px-12 lg:px-20 bg-black relative overflow-hidden flex items-center justify-center"
+      className="min-h-screen py-32 md:py-40 px-6 md:px-12 lg:px-20 bg-black relative overflow-hidden flex flex-col items-center justify-center"
     >
       <motion.div
         animate={{
@@ -26,15 +26,15 @@ export function SpotifySection() {
         className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-green-400/10 rounded-full blur-3xl pointer-events-none"
       />
 
-      <div className="max-w-7xl mx-auto relative z-10 w-full">
+      <div className="max-w-7xl mx-auto relative z-10 w-full flex flex-col items-center justify-center space-y-16 md:space-y-20">
         <ScrollReveal direction="up">
-          <div className="text-center mb-16 md:mb-20">
+          <div className="text-center space-y-6">
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className="flex items-center justify-center gap-4 mb-6"
+              className="flex items-center justify-center gap-4"
             >
               <Music className="w-10 h-10 md:w-12 md:h-12 text-green-400" />
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-abolition font-black text-white">
@@ -53,9 +53,9 @@ export function SpotifySection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto"
+            className="max-w-3xl mx-auto w-full"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-green-400/20 border-2 border-green-400/30 bg-black/50 backdrop-blur-sm p-4 md:p-6">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-green-400/20 border-2 border-green-400/30 bg-black/50 backdrop-blur-sm p-6 md:p-8">
               <iframe
                 data-testid="embed-iframe"
                 style={{ borderRadius: "12px" }}

@@ -20,7 +20,7 @@ export function OrganizersSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-32 md:py-40 px-4 md:px-8 lg:px-16 bg-black overflow-hidden flex items-center justify-center"
+      className="relative py-32 md:py-40 px-6 md:px-8 lg:px-16 bg-black overflow-hidden flex flex-col items-center justify-center"
     >
       <motion.div style={{ y: backgroundY }} className="absolute inset-0">
         <ParallaxSection speed={0.4} className="absolute inset-0 opacity-20">
@@ -47,9 +47,9 @@ export function OrganizersSection() {
         className="absolute top-1/3 left-1/3 w-[600px] h-[600px] bg-green-400/10 rounded-full blur-3xl pointer-events-none"
       />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center justify-center space-y-20 md:space-y-28">
         <ScrollReveal direction="up">
-          <div className="text-center mb-20 md:mb-28 px-4">
+          <div className="text-center px-4 space-y-8">
             <motion.div
               animate={{
                 rotate: [0, 10, -10, 0],
@@ -59,7 +59,7 @@ export function OrganizersSection() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="inline-block mb-8"
+              className="inline-block"
             >
               <Sparkles className="w-16 h-16 md:w-20 md:h-20 text-green-400" />
             </motion.div>
@@ -68,7 +68,7 @@ export function OrganizersSection() {
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              className="text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white mb-6 tracking-tight"
+              className="text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white tracking-tight"
             >
               ST<span className="text-green-400">AFF</span>
             </motion.h2>
@@ -84,7 +84,7 @@ export function OrganizersSection() {
           </div>
         </ScrollReveal>
 
-        <div className="relative">
+        <div className="relative w-full">
           <motion.div
             animate={{
               x: [0, -2000],
@@ -110,7 +110,7 @@ export function OrganizersSection() {
         <ScrollReveal delay={0.6}>
           <motion.div
             whileHover={{ scale: 1.02 }}
-            className="text-center mt-20 md:mt-28 p-8 md:p-12 border-2 border-green-400/40 rounded-2xl bg-linear-to-br from-green-400/10 via-green-400/5 to-transparent backdrop-blur-sm relative overflow-hidden"
+            className="text-center p-8 md:p-12 border-2 border-green-400/40 rounded-2xl bg-linear-to-br from-green-400/10 via-green-400/5 to-transparent backdrop-blur-sm relative overflow-hidden"
           >
             <motion.div
               animate={{
