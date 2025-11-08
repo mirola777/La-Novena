@@ -74,20 +74,20 @@ export function FooterSection() {
                 style={{ marginBottom: "2rem" }}
                 className="text-xl md:text-2xl text-gray-300"
               >
-                La fusión que cambiará todo
+                La fusion que cambiara todo
               </div>
               <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 text-base md:text-lg">
                 <div className="flex items-center gap-2 text-green-400">
                   <Calendar className="w-5 h-5 md:w-6 md:h-6" />
-                  <span>Una noche histórica</span>
+                  <span>Puente 4 Sur</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-400">
                   <Clock className="w-5 h-5 md:w-6 md:h-6" />
-                  <span>6:00 PM - 2:00 AM</span>
+                  <span>7:00 PM - 2:00 AM</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-400">
                   <MapPin className="w-5 h-5 md:w-6 md:h-6" />
-                  <span>Medellín Underground</span>
+                  <span>Medellin</span>
                 </div>
               </div>
             </motion.div>
@@ -113,11 +113,13 @@ export function FooterSection() {
                 style={{ marginBottom: "1.5rem" }}
                 className="text-2xl md:text-3xl font-abolition font-bold text-white"
               >
-                Asado Místico
+                Asado Mistico
               </h3>
               <p className="text-gray-400 text-base md:text-lg">
-                Gastronomía underground · Granizados artesanales · Parrilla
-                nocturna
+                Nace en 2018 como un plan tranquilo entre amigos. Con el tiempo,
+                evoluciono hasta convertirse en lo que es hoy: un espacio donde
+                la buena comida, los granizados artesanales y la parrilla
+                nocturna se unen para crear momentos inolvidables.
               </p>
             </motion.div>
 
@@ -141,7 +143,9 @@ export function FooterSection() {
                 808 Fest
               </h3>
               <p className="text-gray-400 text-base md:text-lg">
-                Música electrónica · Hip hop underground · Cultura urbana
+                Nace en 2022 de la mano de EnMed. Un festival que celebra la
+                musica electronica, el hip hop y la cultura urbana, creando un
+                espacio unico para los amantes del underground en Medellin.
               </p>
             </motion.div>
           </div>
@@ -164,13 +168,13 @@ export function FooterSection() {
                 #LaNovena1
               </div>
               <p className="text-gray-400 text-lg md:text-xl">
-                Síguenos para actualizaciones y contenido exclusivo
+                Siguenos para actualizaciones y contenido exclusivo
               </p>
             </div>
 
             <div className="text-gray-500 text-sm md:text-base space-y-3">
-              <p>© 2025 La Novena-1 • Asado Místico × 808 Fest</p>
-              <p>Medellín, Colombia • Underground Culture</p>
+              <p>© 2025 La Novena-1 • Asado Mistico × 808 Fest</p>
+              <p>Medellin, Colombia</p>
             </div>
 
             <motion.div
@@ -181,7 +185,7 @@ export function FooterSection() {
               transition={{ repeat: Infinity, duration: 3 }}
             >
               <span className="text-2xl md:text-3xl text-green-400 font-bold">
-                ¡Nos vemos en la historia!
+                Nos vemos en la historia!
               </span>
             </motion.div>
           </div>

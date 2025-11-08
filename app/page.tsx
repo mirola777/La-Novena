@@ -2,7 +2,6 @@
 
 import { ArtistsSection } from "./components/sections/ArtistsSection";
 import { FooterSection } from "./components/sections/FooterSection";
-import { GallerySection } from "./components/sections/GallerySection";
 import { HeroSection } from "./components/sections/HeroSection";
 import { LocationSection } from "./components/sections/LocationSection";
 import { OrganizersSection } from "./components/sections/OrganizersSection";
@@ -29,9 +28,6 @@ export default function Home() {
         </div>
         <div className="py-20 md:py-28 lg:py-32">
           <LocationSection />
-        </div>
-        <div className="py-20 md:py-28 lg:py-32">
-          <GallerySection />
         </div>
         <div className="py-20 md:py-28 lg:py-32">
           <OrganizersSection />

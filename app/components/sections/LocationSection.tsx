@@ -2,9 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Clock, MapPin } from "lucide-react";
-import Image from "next/image";
 import { useRef } from "react";
-import { ParallaxSection } from "../ui/ParallaxSection";
 import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function LocationSection() {
@@ -15,7 +13,6 @@ export function LocationSection() {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
-  const backgroundY = useTransform(scrollYProgress, [0, 1], [0, -150]);
 
   return (
     <section
@@ -28,29 +25,17 @@ export function LocationSection() {
       }}
       className="min-h-screen bg-black relative overflow-hidden flex flex-col items-center justify-center"
     >
-      <motion.div style={{ y: backgroundY }} className="absolute inset-0">
-        <ParallaxSection speed={0.5} className="absolute inset-0 opacity-20">
-          <Image
-            src="/assets/background.png"
-            alt=""
-            fill
-            className="object-cover object-center no-select"
-          />
-        </ParallaxSection>
-        <div className="absolute inset-0 bg-linear-to-b from-black via-transparent to-black" />
-      </motion.div>
-
       <motion.div
         animate={{
-          opacity: [0.1, 0.25, 0.1],
-          scale: [1, 1.4, 1],
+          opacity: [0.1, 0.3, 0.1],
+          scale: [1, 1.5, 1],
         }}
         transition={{
-          duration: 12,
+          duration: 8,
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-green-400/10 rounded-full blur-3xl pointer-events-none"
+        className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-green-400/10 rounded-full blur-3xl pointer-events-none"
       />
 
       <div className="max-w-7xl mx-auto relative z-10 w-full flex flex-col items-center justify-center">
@@ -66,15 +51,6 @@ export function LocationSection() {
             >
               UBICA<span className="text-green-400">CION</span>
             </motion.h2>
-            <motion.p
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-2xl md:text-3xl text-gray-400 font-light"
-            >
-              El punto de encuentro del underground
-            </motion.p>
           </div>
         </ScrollReveal>
 
@@ -180,45 +156,7 @@ export function LocationSection() {
               style={{ y: useTransform(scrollYProgress, [0, 1], [50, -50]) }}
               className="relative"
             >
-              <motion.div
-                whileHover={{ scale: 1.05, rotate: 2 }}
-                transition={{ duration: 0.5 }}
-                className="relative w-full aspect-square overflow-hidden rounded-2xl border-2 border-green-400/30 group"
-              >
-                <motion.div
-                  className="absolute -inset-1 bg-linear-to-r from-green-400/40 to-green-600/40 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  animate={{
-                    opacity: [0, 0.5, 0],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                />
-                <Image
-                  src="/assets/background.png"
-                  alt="Ubicación"
-                  fill
-                  className="object-cover object-center no-select"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent" />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-                viewport={{ once: true }}
-                className="mt-12 text-center"
-              >
-                <h3 className="text-3xl md:text-4xl font-abolition font-bold text-green-400 mb-8">
-                  El Corazon del Underground
-                </h3>
-                <p className="text-xl text-gray-400 font-light leading-relaxed">
-                  Un lugar iconico donde la musica, la comida y la cultura
-                  urbana se encuentran para crear algo legendario.
-                </p>
-              </motion.div>
+              <div className="relative w-full aspect-square overflow-hidden rounded-2xl border-2 border-green-400/30 bg-green-400/5"></div>
             </motion.div>
           </ScrollReveal>
         </div>

@@ -112,6 +112,9 @@ export function HeroSection() {
           <motion.div
             style={{
               opacity: sponsorsOpacity,
+              paddingRight: "2rem",
+              paddingLeft: "2rem",
+              paddingBottom: "1rem",
             }}
             className="pb-8 md:pb-12 flex flex-col items-center gap-8"
           >

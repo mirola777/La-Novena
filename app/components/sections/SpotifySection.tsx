@@ -17,7 +17,7 @@ export function SpotifySection() {
         paddingLeft: "1.5rem",
         paddingRight: "1.5rem",
       }}
-      className="min-h-screen bg-black relative overflow-hidden flex flex-col items-center justify-center"
+      className="bg-black relative overflow-hidden flex flex-col items-center justify-center"
     >
       <motion.div
         animate={{
@@ -60,7 +60,7 @@ export function SpotifySection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto w-full"
+            className="max-w-2xl mx-auto w-full"
           >
             <div
               className="relative rounded-2xl overflow-hidden shadow-2xl shadow-green-400/20 border-2 border-green-400/30 bg-black/50 backdrop-blur-sm"
@@ -71,7 +71,7 @@ export function SpotifySection() {
                 style={{ borderRadius: "12px" }}
                 src="https://open.spotify.com/embed/playlist/20LX4TsCwrBVBiEDUnhBJC?utm_source=generator"
                 width="100%"
-                height="352"
+                height="300"
                 frameBorder="0"
                 allowFullScreen
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
