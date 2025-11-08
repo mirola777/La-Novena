@@ -20,7 +20,13 @@ export function LocationSection() {
   return (
     <section
       ref={ref}
-      className="min-h-screen py-32 md:py-40 px-6 md:px-12 lg:px-20 bg-black relative overflow-hidden flex flex-col items-center justify-center"
+      style={{
+        paddingTop: "8rem",
+        paddingBottom: "8rem",
+        paddingLeft: "1.5rem",
+        paddingRight: "1.5rem",
+      }}
+      className="min-h-screen bg-black relative overflow-hidden flex flex-col items-center justify-center"
     >
       <motion.div style={{ y: backgroundY }} className="absolute inset-0">
         <ParallaxSection speed={0.5} className="absolute inset-0 opacity-20">
@@ -47,14 +53,15 @@ export function LocationSection() {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-green-400/10 rounded-full blur-3xl pointer-events-none"
       />
 
-      <div className="max-w-7xl mx-auto relative z-10 w-full flex flex-col items-center justify-center space-y-24 md:space-y-32">
+      <div className="max-w-7xl mx-auto relative z-10 w-full flex flex-col items-center justify-center">
         <ScrollReveal direction="up">
-          <div className="text-center space-y-8">
+          <div style={{ marginBottom: "6rem" }} className="text-center">
             <motion.h2
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
+              style={{ marginBottom: "2rem" }}
               className="text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white tracking-tight"
             >
               UBICA<span className="text-green-400">CION</span>
@@ -72,14 +79,15 @@ export function LocationSection() {
         </ScrollReveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-24 items-center w-full">
-          <motion.div
-            style={{ y }}
-            className="flex flex-col space-y-12 md:space-y-14"
-          >
+          <motion.div style={{ y }} className="flex flex-col">
             <ScrollReveal direction="left">
               <motion.div
                 whileHover={{ scale: 1.05, x: 10 }}
-                className="p-10 border-2 border-green-400/30 rounded-2xl bg-black/60 backdrop-blur-sm relative overflow-hidden group"
+                style={{
+                  padding: "2.5rem",
+                  marginBottom: "3rem",
+                }}
+                className="border-2 border-green-400/30 rounded-2xl bg-black/60 backdrop-blur-sm relative overflow-hidden group"
               >
                 <motion.div
                   className="absolute inset-0 bg-linear-to-r from-green-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -123,7 +131,8 @@ export function LocationSection() {
             <ScrollReveal direction="left" delay={0.2}>
               <motion.div
                 whileHover={{ scale: 1.05, x: 10 }}
-                className="p-10 border-2 border-green-400/30 rounded-2xl bg-black/60 backdrop-blur-sm relative overflow-hidden group"
+                style={{ padding: "2.5rem" }}
+                className="border-2 border-green-400/30 rounded-2xl bg-black/60 backdrop-blur-sm relative overflow-hidden group"
               >
                 <motion.div
                   className="absolute inset-0 bg-linear-to-r from-green-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"

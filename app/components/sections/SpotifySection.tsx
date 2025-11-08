@@ -11,7 +11,13 @@ export function SpotifySection() {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen py-32 md:py-40 px-6 md:px-12 lg:px-20 bg-black relative overflow-hidden flex flex-col items-center justify-center"
+      style={{
+        paddingTop: "8rem",
+        paddingBottom: "8rem",
+        paddingLeft: "1.5rem",
+        paddingRight: "1.5rem",
+      }}
+      className="min-h-screen bg-black relative overflow-hidden flex flex-col items-center justify-center"
     >
       <motion.div
         animate={{
@@ -26,14 +32,15 @@ export function SpotifySection() {
         className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-green-400/10 rounded-full blur-3xl pointer-events-none"
       />
 
-      <div className="max-w-7xl mx-auto relative z-10 w-full flex flex-col items-center justify-center space-y-16 md:space-y-20">
+      <div className="max-w-7xl mx-auto relative z-10 w-full flex flex-col items-center justify-center">
         <ScrollReveal direction="up">
-          <div className="text-center space-y-6">
+          <div style={{ marginBottom: "4rem" }} className="text-center">
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
+              style={{ marginBottom: "1.5rem" }}
               className="flex items-center justify-center gap-4"
             >
               <Music className="w-10 h-10 md:w-12 md:h-12 text-green-400" />
@@ -55,7 +62,10 @@ export function SpotifySection() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto w-full"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-green-400/20 border-2 border-green-400/30 bg-black/50 backdrop-blur-sm p-6 md:p-8">
+            <div
+              className="relative rounded-2xl overflow-hidden shadow-2xl shadow-green-400/20 border-2 border-green-400/30 bg-black/50 backdrop-blur-sm"
+              style={{ padding: "1.5rem" }}
+            >
               <iframe
                 data-testid="embed-iframe"
                 style={{ borderRadius: "12px" }}

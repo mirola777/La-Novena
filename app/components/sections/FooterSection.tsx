@@ -7,7 +7,15 @@ import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function FooterSection() {
   return (
-    <footer className="relative py-32 md:py-40 px-6 md:px-10 lg:px-16 bg-black overflow-hidden flex flex-col items-center justify-center">
+    <footer
+      style={{
+        paddingTop: "8rem",
+        paddingBottom: "8rem",
+        paddingLeft: "1.5rem",
+        paddingRight: "1.5rem",
+      }}
+      className="relative bg-black overflow-hidden flex flex-col items-center justify-center"
+    >
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <Image
           src="/assets/background.png"
@@ -17,31 +25,43 @@ export function FooterSection() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl w-full flex flex-col items-center justify-center space-y-20 md:space-y-24">
+      <div className="relative z-10 mx-auto max-w-7xl w-full flex flex-col items-center justify-center">
         <ScrollReveal direction="up">
-          <div className="text-center space-y-16">
+          <div style={{ marginBottom: "5rem" }} className="text-center">
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.5 }}
-              className="space-y-6 md:space-y-10"
             >
-              <h2 className="text-7xl md:text-8xl lg:text-9xl font-abolition font-black text-white tracking-tight">
+              <h2
+                style={{ marginBottom: "1.5rem" }}
+                className="text-7xl md:text-8xl lg:text-9xl font-abolition font-black text-white tracking-tight"
+              >
                 6 DE DICIEMBRE
               </h2>
-              <div className="text-5xl md:text-6xl lg:text-7xl font-abolition font-black text-green-400">
+              <div
+                style={{ marginBottom: "1.5rem" }}
+                className="text-5xl md:text-6xl lg:text-7xl font-abolition font-black text-green-400"
+              >
                 2025
               </div>
-              <div className="text-2xl md:text-3xl lg:text-4xl text-gray-400 font-light tracking-widest">
+              <div
+                style={{ marginBottom: "4rem" }}
+                className="text-2xl md:text-3xl lg:text-4xl text-gray-400 font-light tracking-widest"
+              >
                 PUENTE DE LA 4 SUR
               </div>
             </motion.div>
 
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="inline-block p-8 md:p-10 border border-green-400/50 rounded-lg bg-green-400/5 mx-auto"
+              style={{ padding: "2.5rem" }}
+              className="inline-block border border-green-400/50 rounded-lg bg-green-400/5 mx-auto"
             >
-              <div className="mb-8 flex justify-center">
+              <div
+                style={{ marginBottom: "2rem" }}
+                className="flex justify-center"
+              >
                 <Image
                   src="/assets/lanovena.png"
                   alt="La Novena-1"
@@ -50,7 +70,10 @@ export function FooterSection() {
                   className="w-auto h-24 md:h-28 object-contain no-select"
                 />
               </div>
-              <div className="text-xl md:text-2xl text-gray-300 mb-8">
+              <div
+                style={{ marginBottom: "2rem" }}
+                className="text-xl md:text-2xl text-gray-300"
+              >
                 La fusión que cambiará todo
               </div>
               <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 text-base md:text-lg">
@@ -75,16 +98,21 @@ export function FooterSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 max-w-5xl mx-auto w-full">
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="text-center p-8 border border-green-400/30 rounded-lg bg-black/50 flex flex-col items-center justify-center space-y-6"
+              style={{ padding: "2rem" }}
+              className="text-center border border-green-400/30 rounded-lg bg-black/50 flex flex-col items-center justify-center"
             >
               <Image
                 src="/assets/AM.png"
                 alt="Asado Místico"
                 width={90}
                 height={90}
+                style={{ marginBottom: "1.5rem" }}
                 className="w-20 h-20 object-contain no-select filter-none"
               />
-              <h3 className="text-2xl md:text-3xl font-abolition font-bold text-white">
+              <h3
+                style={{ marginBottom: "1.5rem" }}
+                className="text-2xl md:text-3xl font-abolition font-bold text-white"
+              >
                 Asado Místico
               </h3>
               <p className="text-gray-400 text-base md:text-lg">
@@ -95,16 +123,21 @@ export function FooterSection() {
 
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="text-center p-8 border border-green-400/30 rounded-lg bg-black/50 flex flex-col items-center justify-center space-y-6"
+              style={{ padding: "2rem" }}
+              className="text-center border border-green-400/30 rounded-lg bg-black/50 flex flex-col items-center justify-center"
             >
               <Image
                 src="/assets/808.png"
                 alt="808 Fest"
                 width={90}
                 height={90}
+                style={{ marginBottom: "1.5rem" }}
                 className="w-20 h-20 object-contain no-select filter-none"
               />
-              <h3 className="text-2xl md:text-3xl font-abolition font-bold text-white">
+              <h3
+                style={{ marginBottom: "1.5rem" }}
+                className="text-2xl md:text-3xl font-abolition font-bold text-white"
+              >
                 808 Fest
               </h3>
               <p className="text-gray-400 text-base md:text-lg">

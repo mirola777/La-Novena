@@ -7,27 +7,23 @@ import { useEffect, useState } from "react";
 export function Navbar() {
   const [isVisible, setIsVisible] = useState(false);
   const { scrollY } = useScroll();
+  const showFrom = 2500; // px where the navbar starts to appear
 
   useEffect(() => {
     const handleScroll = () => {
       if (typeof window === "undefined") return;
-      setIsVisible(window.scrollY > window.innerHeight * 0.9);
+      setIsVisible(window.scrollY > showFrom);
     };
 
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", handleScroll);
+      // initialize visibility on mount
+      handleScroll();
       return () => window.removeEventListener("scroll", handleScroll);
     }
   }, []);
 
-  const clientInnerHeight =
-    typeof window !== "undefined" ? window.innerHeight : 1000;
-
-  const opacity = useTransform(
-    scrollY,
-    [clientInnerHeight * 0.9, clientInnerHeight * 1.1],
-    [0, 1]
-  );
+  const opacity = useTransform(scrollY, [showFrom, showFrom + 200], [0, 1]);
 
   if (!isVisible) return null;
 

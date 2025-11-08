@@ -21,7 +21,13 @@ export function PricingSection() {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen py-32 md:py-40 px-6 md:px-12 lg:px-20 bg-black relative overflow-hidden flex flex-col items-center justify-center"
+      style={{
+        paddingTop: "8rem",
+        paddingBottom: "8rem",
+        paddingLeft: "1.5rem",
+        paddingRight: "1.5rem",
+      }}
+      className="min-h-screen bg-black relative overflow-hidden flex flex-col items-center justify-center"
     >
       <motion.div style={{ y: backgroundY }} className="absolute inset-0">
         <ParallaxSection speed={0.4} className="absolute inset-0 opacity-30">
@@ -65,12 +71,13 @@ export function PricingSection() {
       <div className="max-w-7xl mx-auto relative z-10 w-full flex flex-col items-center justify-center">
         <motion.div style={{ scale }}>
           <ScrollReveal direction="up">
-            <div className="text-center mb-24 md:mb-32 space-y-8">
+            <div style={{ marginBottom: "6rem" }} className="text-center">
               <motion.div
                 initial={{ scale: 0.5, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1.2 }}
                 viewport={{ once: true }}
+                style={{ marginBottom: "2rem" }}
                 className="relative inline-block"
               >
                 <motion.div
@@ -102,7 +109,10 @@ export function PricingSection() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-16 mb-20">
+          <div
+            style={{ marginBottom: "5rem" }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-16"
+          >
             {PRICING.map((item, index) => (
               <PricingCard key={index} item={item} index={index} />
             ))}
@@ -111,7 +121,11 @@ export function PricingSection() {
           <ScrollReveal delay={0.8}>
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="text-center mt-24 p-10 border-2 border-green-400/40 rounded-2xl bg-linear-to-br from-green-400/10 via-green-400/5 to-transparent backdrop-blur-sm relative overflow-hidden group"
+              style={{
+                marginTop: "6rem",
+                padding: "2.5rem",
+              }}
+              className="text-center border-2 border-green-400/40 rounded-2xl bg-linear-to-br from-green-400/10 via-green-400/5 to-transparent backdrop-blur-sm relative overflow-hidden group"
             >
               <motion.div
                 animate={{

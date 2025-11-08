@@ -20,7 +20,13 @@ export function OrganizersSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-32 md:py-40 px-6 md:px-8 lg:px-16 bg-black overflow-hidden flex flex-col items-center justify-center"
+      style={{
+        paddingTop: "8rem",
+        paddingBottom: "8rem",
+        paddingLeft: "1.5rem",
+        paddingRight: "1.5rem",
+      }}
+      className="relative bg-black overflow-hidden flex flex-col items-center justify-center"
     >
       <motion.div style={{ y: backgroundY }} className="absolute inset-0">
         <ParallaxSection speed={0.4} className="absolute inset-0 opacity-20">
@@ -47,9 +53,16 @@ export function OrganizersSection() {
         className="absolute top-1/3 left-1/3 w-[600px] h-[600px] bg-green-400/10 rounded-full blur-3xl pointer-events-none"
       />
 
-      <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center justify-center space-y-20 md:space-y-28">
+      <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center justify-center">
         <ScrollReveal direction="up">
-          <div className="text-center px-4 space-y-8">
+          <div
+            style={{
+              marginBottom: "5rem",
+              paddingLeft: "1rem",
+              paddingRight: "1rem",
+            }}
+            className="text-center"
+          >
             <motion.div
               animate={{
                 rotate: [0, 10, -10, 0],
@@ -59,6 +72,7 @@ export function OrganizersSection() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
+              style={{ marginBottom: "2rem" }}
               className="inline-block"
             >
               <Sparkles className="w-16 h-16 md:w-20 md:h-20 text-green-400" />
@@ -68,6 +82,7 @@ export function OrganizersSection() {
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
+              style={{ marginBottom: "2rem" }}
               className="text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white tracking-tight"
             >
               ST<span className="text-green-400">AFF</span>

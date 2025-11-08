@@ -11,11 +11,29 @@ import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function ArtistsSection() {
   return (
-    <section className="bg-black py-20 flex flex-col items-center justify-center">
-      <div className="min-h-screen flex items-center justify-center py-24 px-6 md:px-8">
+    <section
+      style={{ paddingTop: "5rem", paddingBottom: "5rem" }}
+      className="bg-black flex flex-col items-center justify-center"
+    >
+      <div
+        style={{
+          paddingTop: "6rem",
+          paddingBottom: "6rem",
+          paddingLeft: "1.5rem",
+          paddingRight: "1.5rem",
+        }}
+        className="min-h-screen flex items-center justify-center"
+      >
         <div className="max-w-7xl mx-auto w-full">
           <ScrollReveal direction="up">
-            <div className="text-center px-4 space-y-6">
+            <div
+              style={{
+                paddingLeft: "1rem",
+                paddingRight: "1rem",
+                marginBottom: "1.5rem",
+              }}
+              className="text-center"
+            >
               <motion.h2
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
@@ -60,8 +78,14 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
   return (
     <motion.div
       ref={ref}
-      style={{ opacity }}
-      className="min-h-screen flex items-center justify-center px-6 md:px-8 lg:px-12 relative overflow-hidden py-20 w-screen"
+      style={{
+        opacity,
+        paddingTop: "5rem",
+        paddingBottom: "5rem",
+        paddingLeft: "1.5rem",
+        paddingRight: "1.5rem",
+      }}
+      className="min-h-screen flex items-center justify-center relative overflow-hidden w-screen"
     >
       <motion.div style={{ y: backgroundY }} className="absolute inset-0">
         <Image
@@ -108,9 +132,9 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
       <div className="max-w-6xl mx-auto w-full text-center relative z-10 flex flex-col items-center justify-center">
         <motion.div
           style={{ y, scale, rotate }}
-          className="flex flex-col items-center justify-center space-y-8 md:space-y-12"
+          className="flex flex-col items-center justify-center"
         >
-          <div className="relative mb-8">
+          <div style={{ marginBottom: "2rem" }} className="relative">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 0.08 }}
@@ -121,7 +145,10 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
               {(index + 1).toString().padStart(2, "0")}
             </motion.div>
 
-            <div className="flex items-center justify-center gap-6 md:gap-10 mb-6 flex-wrap">
+            <div
+              style={{ marginBottom: "1.5rem" }}
+              className="flex items-center justify-center gap-6 md:gap-10 flex-wrap"
+            >
               <motion.h3
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -156,6 +183,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
+            style={{ marginBottom: "2rem" }}
             className="inline-block px-8 py-3 border-2 border-green-400/50 rounded-full bg-green-400/5 backdrop-blur-sm"
           >
             <span className="text-sm md:text-base lg:text-lg text-green-400 uppercase tracking-[0.3em] font-bold">
@@ -168,7 +196,11 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light px-6 md:px-8"
+            style={{
+              paddingLeft: "1.5rem",
+              paddingRight: "1.5rem",
+            }}
+            className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light"
           >
             {artist.description}
           </motion.p>

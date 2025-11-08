@@ -25,7 +25,13 @@ export function GallerySection() {
   return (
     <section
       ref={sectionRef}
-      className="px-6 md:px-12 lg:px-20 relative overflow-hidden flex flex-col items-center justify-center py-32 md:py-40"
+      style={{
+        paddingTop: "8rem",
+        paddingBottom: "8rem",
+        paddingLeft: "1.5rem",
+        paddingRight: "1.5rem",
+      }}
+      className="relative overflow-hidden flex flex-col items-center justify-center"
     >
       <motion.div style={{ y: backgroundY }} className="absolute inset-0">
         <ParallaxSection speed={0.3} className="absolute inset-0 opacity-20">
@@ -52,14 +58,15 @@ export function GallerySection() {
         className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-green-400/10 rounded-full blur-3xl pointer-events-none"
       />
 
-      <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center justify-center space-y-20 md:space-y-28">
+      <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center justify-center">
         <ScrollReveal direction="up">
-          <div className="text-center space-y-8 md:space-y-12">
+          <div style={{ marginBottom: "5rem" }} className="text-center">
             <motion.h2
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
+              style={{ marginBottom: "2rem" }}
               className="text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white tracking-tight"
             >
               GALE<span className="text-green-400">RÍA</span>
