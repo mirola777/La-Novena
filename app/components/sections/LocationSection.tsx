@@ -140,10 +140,10 @@ export function LocationSection() {
                       HORARIOS
                     </h3>
                     <p className="text-xl md:text-2xl text-green-400 font-light mb-2">
-                      6:00 PM - 2:00 AM
+                      7:00 PM - ???
                     </p>
                     <p className="text-lg text-gray-400 font-light">
-                      Viernes 6 de Diciembre, 2025
+                      Sabado 6 de Diciembre, 2025
                     </p>
                   </div>
                 </div>

@@ -134,7 +134,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
           style={{ y, scale, rotate }}
           className="flex flex-col items-center justify-center"
         >
-          <div style={{ marginBottom: "2rem" }} className="relative">
+          <div className="relative">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 0.08 }}
@@ -183,8 +183,8 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
-            style={{ marginBottom: "2rem" }}
-            className="inline-block px-8 py-3 border-2 border-green-400/50 rounded-full bg-green-400/5 backdrop-blur-sm"
+            style={{ marginBottom: "0.5rem", padding: "0 1rem" }}
+            className="inline-block  border-2 border-green-400/50 rounded-full bg-green-400/5 backdrop-blur-sm"
           >
             <span className="text-sm md:text-base lg:text-lg text-green-400 uppercase tracking-[0.3em] font-bold">
               {artist.genre}
@@ -210,29 +210,49 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
+            style={{ marginTop: "0.5rem" }}
             className="flex items-center justify-center gap-6 md:gap-8 flex-wrap px-4"
           >
             <motion.a
               href={artist.spotify}
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.1, y: -5 }}
+              whileHover={{ scale: 1.05, y: -8 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-3 px-10 py-5 bg-green-400 text-black rounded-full font-bold hover:bg-green-300 transition-colors duration-300 shadow-lg shadow-green-400/30 text-lg"
+              style={{
+                padding: "0.5rem 2.5rem",
+                background: "linear-gradient(135deg, #1DB954 0%, #1ed760 100%)",
+                boxShadow:
+                  "0 10px 40px rgba(29, 185, 84, 0.4), 0 0 20px rgba(29, 185, 84, 0.3)",
+              }}
+              className="flex items-center gap-3 text-white rounded-full font-bold transition-all duration-300 text-lg relative overflow-hidden group"
             >
-              <Music2 className="w-6 h-6 shrink-0" />
-              <span className="whitespace-nowrap">Spotify</span>
+              <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <Music2 className="w-7 h-7 shrink-0 relative z-10" />
+              <span className="whitespace-nowrap relative z-10 font-black">
+                Spotify
+              </span>
             </motion.a>
             <motion.a
               href={artist.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.1, y: -5 }}
+              whileHover={{ scale: 1.05, y: -8 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-3 px-10 py-5 bg-linear-to-r from-purple-500 to-pink-500 text-white rounded-full font-bold hover:from-purple-400 hover:to-pink-400 transition-all duration-300 shadow-lg shadow-purple-500/30 text-lg"
+              style={{
+                padding: "0.5rem 2.5rem",
+                background:
+                  "linear-gradient(135deg, #833AB4 0%, #C13584 50%, #E1306C 100%)",
+                boxShadow:
+                  "0 10px 40px rgba(193, 53, 132, 0.4), 0 0 20px rgba(225, 48, 108, 0.3)",
+              }}
+              className="flex items-center gap-3 text-white rounded-full font-bold transition-all duration-300 text-lg relative overflow-hidden group"
             >
-              <Instagram className="w-6 h-6 shrink-0" />
-              <span className="whitespace-nowrap">Instagram</span>
+              <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <Instagram className="w-7 h-7 shrink-0 relative z-10" />
+              <span className="whitespace-nowrap relative z-10 font-black">
+                Instagram
+              </span>
             </motion.a>
           </motion.div>
 
@@ -241,6 +261,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 1 }}
             viewport={{ once: true }}
+            style={{ marginTop: "1rem" }}
             className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto mt-12 overflow-hidden rounded-2xl group"
           >
             <div className="relative w-full h-full flex items-center justify-center">

@@ -112,8 +112,8 @@ function OrganizerCard({ organizer }: OrganizerCardProps) {
       className="shrink-0 w-80 md:w-96 relative group"
     >
       <div
-        style={{ padding: "2rem" }}
-        className="relative w-full overflow-hidden rounded-2xl border-2 border-green-400/30 hover:border-green-400 transition-colors duration-300 bg-black/80 backdrop-blur-sm shadow-[0_0_30px_rgba(34,197,94,0.15)] hover:shadow-[0_0_50px_rgba(34,197,94,0.3)]"
+        style={{ padding: "2rem", minHeight: "350px" }}
+        className="relative w-full overflow-hidden rounded-2xl border-2 border-green-400/30 hover:border-green-400 transition-colors duration-300 bg-black/80 backdrop-blur-sm shadow-[0_0_30px_rgba(34,197,94,0.15)] hover:shadow-[0_0_50px_rgba(34,197,94,0.3)] flex flex-col justify-center items-center text-center"
       >
         <div style={{ marginBottom: "1.5rem" }}>
           <h3

@@ -144,11 +144,11 @@ function PricingCard({ item, index }: { item: PricingItem; index: number }) {
       <motion.div
         ref={ref}
         style={{ opacity }}
-        className="relative group h-full flex items-center justify-center"
+        className="relative group flex items-stretch justify-center h-full"
       >
         <div
-          style={{ padding: "3.5rem 2.5rem" }}
-          className="relative text-center border-2 border-green-400/30 hover:border-green-400 transition-colors duration-300 rounded-2xl bg-black/80 backdrop-blur-sm overflow-hidden h-full flex flex-col justify-center items-center shadow-[0_0_30px_rgba(34,197,94,0.15)] hover:shadow-[0_0_50px_rgba(34,197,94,0.3)]"
+          style={{ padding: "3.5rem 2.5rem", minHeight: "400px" }}
+          className="relative text-center border-2 border-green-400/30 hover:border-green-400 transition-colors duration-300 rounded-2xl bg-black/80 backdrop-blur-sm overflow-hidden w-full flex flex-col justify-center items-center shadow-[0_0_30px_rgba(34,197,94,0.15)] hover:shadow-[0_0_50px_rgba(34,197,94,0.3)]"
         >
           <div>
             <h3

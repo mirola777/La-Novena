@@ -34,7 +34,7 @@ export function SpotifySection() {
 
       <div className="max-w-7xl mx-auto relative z-10 w-full flex flex-col items-center justify-center">
         <ScrollReveal direction="up">
-          <div style={{ marginBottom: "4rem" }} className="text-center">
+          <div className="text-center">
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
@@ -56,15 +56,18 @@ export function SpotifySection() {
 
         <ScrollReveal direction="up" delay={0.2}>
           <motion.div
+            style={{
+              marginTop: "2rem",
+            }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto w-full"
+            className="max-w-2xl mx-auto w-full h-fit"
           >
             <div
               className="relative rounded-2xl overflow-hidden shadow-2xl shadow-green-400/20 border-2 border-green-400/30 bg-black/50 backdrop-blur-sm"
-              style={{ padding: "1.5rem" }}
+              style={{ padding: "0.5rem" }}
             >
               <iframe
                 data-testid="embed-iframe"
@@ -76,7 +79,7 @@ export function SpotifySection() {
                 allowFullScreen
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
-                className="w-full"
+                className="w-full md:w-[600px] h-72 md:h-80 lg:h-96"
               />
             </div>
           </motion.div>

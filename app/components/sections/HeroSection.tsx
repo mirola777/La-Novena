@@ -109,16 +109,18 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          <motion.div
+          <div
             style={{
-              opacity: sponsorsOpacity,
               paddingRight: "2rem",
               paddingLeft: "2rem",
               paddingBottom: "1rem",
             }}
             className="pb-8 md:pb-12 flex flex-col items-center gap-8"
           >
-            <div className="px-8 md:px-16 lg:px-20">
+            <motion.div
+              style={{ opacity: sponsorsOpacity }}
+              className="px-8 md:px-16 lg:px-20"
+            >
               <Image
                 src="/assets/logos.png"
                 alt="Patrocinadores"
@@ -126,7 +128,7 @@ export function HeroSection() {
                 height={100}
                 className="w-auto h-12 md:h-14 lg:h-16 object-contain no-select opacity-80"
               />
-            </div>
+            </motion.div>
 
             <div className="flex justify-center">
               <div className="w-6 h-10 border-2 border-green-400 rounded-full flex justify-center opacity-60">
@@ -141,7 +143,7 @@ export function HeroSection() {
                 />
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
