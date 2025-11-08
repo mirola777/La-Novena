@@ -83,7 +83,7 @@ export const ARTISTS: Artist[] = [
     genre: "Urbano Experimental",
     event: "808",
     backgroundImage: "/assets/artists/jp2.jpg",
-    profileImage: "/assets/artists/jp1.jpg",
+    profileImage: "/assets/artists/jp1.jpeg",
     spotify:
       "https://open.spotify.com/intl-es/artist/6WgiOO4ma4Wqrdyfvg8Kck?si=8qYMtRzwSRqvYL7cB_fhtg",
     instagram: "https://www.instagram.com/jpssnd/?__pwa=1",
