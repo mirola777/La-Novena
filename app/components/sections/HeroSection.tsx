@@ -10,8 +10,10 @@ export function HeroSection() {
   const timeLeft = useCountdown(EVENT_DATE);
   const { scrollYProgress } = useScroll();
 
-  const backgroundY = useTransform(scrollYProgress, [0, 0.5], [0, 200]);
-  const backgroundScale = useTransform(scrollYProgress, [0, 0.5], [1, 1.2]);
+  const backgroundY = useTransform(scrollYProgress, [0, 0.5], [0, 300]);
+  const backgroundScale = useTransform(scrollYProgress, [0, 0.5], [1, 1.3]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+  const contentY = useTransform(scrollYProgress, [0, 0.3], [0, -100]);
 
   return (
     <section className="relative min-h-[200vh] flex items-start justify-center overflow-hidden">
@@ -33,7 +35,10 @@ export function HeroSection() {
         </ParallaxSection>
 
         <div className="relative z-10 w-full h-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 py-12 md:py-16">
-          <div className="h-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            style={{ opacity: contentOpacity, y: contentY }}
+            className="h-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          >
             {/* Columna Izquierda - Logo La Novena */}
             <motion.div
               initial={{ opacity: 0, x: -100 }}
@@ -225,10 +230,10 @@ export function HeroSection() {
                 </div>
               </div>
             </motion.div>
-          </div>
+          </motion.div>
 
-          {/* Logos patrocinadores en la parte inferior */}
           <motion.div
+            style={{ opacity: contentOpacity }}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 2.6 }}
@@ -245,8 +250,8 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Indicador de scroll */}
           <motion.div
+            style={{ opacity: contentOpacity }}
             className="absolute bottom-4 left-1/2 -translate-x-1/2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, y: [0, 10, 0] }}

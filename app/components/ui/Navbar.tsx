@@ -39,28 +39,8 @@ export function Navbar() {
       style={{ opacity }}
       className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-2xl border-b-2 border-green-400/30 shadow-lg shadow-black/50"
     >
-      <div className="mx-auto px-6 md:px-10 lg:px-16 py-6 md:py-7  w-full">
-        <div className="flex items-center justify-between px-10">
-          <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-          >
-            <motion.div
-              whileHover={{ scale: 1.15, rotate: 5 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <Image
-                src="/assets/AM.png"
-                alt="Asado Místico"
-                width={80}
-                height={80}
-                className="w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 object-contain no-select cursor-pointer"
-              />
-            </motion.div>
-          </motion.div>
-
+      <div className="mx-auto px-6 md:px-10 lg:px-16 py-6 md:py-7 w-full">
+        <div className="flex items-center justify-center">
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -109,26 +89,6 @@ export function Navbar() {
               }}
               className="absolute inset-0 bg-green-400/20 blur-2xl rounded-full -z-10"
             />
-          </motion.div>
-
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-          >
-            <motion.div
-              whileHover={{ scale: 1.15, rotate: -5 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <Image
-                src="/assets/808.png"
-                alt="808 Fest"
-                width={80}
-                height={80}
-                className="w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 object-contain no-select cursor-pointer"
-              />
-            </motion.div>
           </motion.div>
         </div>
       </div>

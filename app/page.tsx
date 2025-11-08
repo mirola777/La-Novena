@@ -18,22 +18,22 @@ export default function Home() {
       <AudioPlayer />
       <main className="relative">
         <HeroSection />
-        <div className="py-16 md:py-24 lg:py-32">
+        <div className="py-20 md:py-28 lg:py-32">
           <ArtistsSection />
         </div>
-        <div className="py-16 md:py-24 lg:py-32">
+        <div className="py-20 md:py-28 lg:py-32">
           <SpotifySection />
         </div>
-        <div className="py-16 md:py-24 lg:py-32">
+        <div className="py-20 md:py-28 lg:py-32">
           <PricingSection />
         </div>
-        <div className="py-16 md:py-24 lg:py-32">
+        <div className="py-20 md:py-28 lg:py-32">
           <LocationSection />
         </div>
-        <div className="py-16 md:py-24 lg:py-32">
+        <div className="py-20 md:py-28 lg:py-32">
           <GallerySection />
         </div>
-        <div className="py-16 md:py-24 lg:py-32">
+        <div className="py-20 md:py-28 lg:py-32">
           <OrganizersSection />
         </div>
         <FooterSection />

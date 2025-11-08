@@ -70,7 +70,7 @@ export function OrganizersSection() {
               viewport={{ once: true }}
               className="text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white mb-6 tracking-tight"
             >
-              ORGANI<span className="text-green-400">ZADORES</span>
+              ST<span className="text-green-400">AFF</span>
             </motion.h2>
             <motion.p
               initial={{ y: 20, opacity: 0 }}
@@ -79,7 +79,7 @@ export function OrganizersSection() {
               viewport={{ once: true }}
               className="text-2xl md:text-3xl text-gray-400 font-light flex items-center justify-center gap-3 flex-wrap"
             >
-              🎄 El equipo que hace la magia decembrina 🎅
+              El equipo que hace la magia decembrina
             </motion.p>
           </div>
         </ScrollReveal>

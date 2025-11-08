@@ -21,7 +21,7 @@ export function ArtistsSection() {
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1.2 }}
                 viewport={{ once: true }}
-                className="text-6xl md:text-7xl lg:text-8xl font-abolition font-black text-white mb-6 tracking-tight"
+                className="text-5xl md:text-6xl lg:text-7xl font-abolition font-black text-white mb-6 tracking-tight"
               >
                 LINE<span className="text-green-400">UP</span>
               </motion.h2>
@@ -156,9 +156,9 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
-            className="inline-block px-10 py-4 border-2 border-green-400/50 rounded-full bg-green-400/5 backdrop-blur-sm"
+            className="inline-block px-8 py-3 border-2 border-green-400/50 rounded-full bg-green-400/5 backdrop-blur-sm mb-6"
           >
-            <span className="text-base md:text-lg lg:text-xl text-green-400 uppercase tracking-[0.2em] font-bold">
+            <span className="text-sm md:text-base lg:text-lg text-green-400 uppercase tracking-[0.3em] font-bold">
               {artist.genre}
             </span>
           </motion.div>
@@ -168,7 +168,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light px-6 md:px-8"
+            className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light px-6 md:px-8 mb-10"
           >
             {artist.description}
           </motion.p>
@@ -178,7 +178,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
-            className="flex items-center justify-center gap-4 md:gap-6 mt-8 flex-wrap px-4"
+            className="flex items-center justify-center gap-6 md:gap-8 mt-8 flex-wrap px-4"
           >
             <motion.a
               href={artist.spotify}
@@ -186,9 +186,9 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-3 px-8 py-4 bg-green-400 text-black rounded-full font-bold hover:bg-green-300 transition-colors duration-300 shadow-lg shadow-green-400/30"
+              className="flex items-center gap-3 px-10 py-5 bg-green-400 text-black rounded-full font-bold hover:bg-green-300 transition-colors duration-300 shadow-lg shadow-green-400/30 text-lg"
             >
-              <Music2 className="w-5 h-5 shrink-0" />
+              <Music2 className="w-6 h-6 shrink-0" />
               <span className="whitespace-nowrap">Spotify</span>
             </motion.a>
             <motion.a
@@ -197,9 +197,9 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-3 px-8 py-4 bg-linear-to-r from-purple-500 to-pink-500 text-white rounded-full font-bold hover:from-purple-400 hover:to-pink-400 transition-all duration-300 shadow-lg shadow-purple-500/30"
+              className="flex items-center gap-3 px-10 py-5 bg-linear-to-r from-purple-500 to-pink-500 text-white rounded-full font-bold hover:from-purple-400 hover:to-pink-400 transition-all duration-300 shadow-lg shadow-purple-500/30 text-lg"
             >
-              <Instagram className="w-5 h-5 shrink-0" />
+              <Instagram className="w-6 h-6 shrink-0" />
               <span className="whitespace-nowrap">Instagram</span>
             </motion.a>
           </motion.div>

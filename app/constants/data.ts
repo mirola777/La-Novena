@@ -7,7 +7,7 @@ export const EVENT_INFO: EventInfo = {
   date: "6 de Diciembre 2025",
   location: "Puente de la 4 Sur (Carrera 50C 1 Sur 43)",
   description:
-    "La fusión épica del underground: Asado Místico se une con 808 Fest para crear el evento más esperado del año",
+    "La fusion epica del underground: Asado Mistico se une con 808 Fest para crear el evento mas esperado del ano",
 };
 
 export const ARTISTS: Artist[] = [
@@ -28,7 +28,7 @@ export const ARTISTS: Artist[] = [
     id: "2",
     name: "Beleuve",
     description:
-      "Productor visionario que fusiona sonidos electrónicos con la esencia del rap clásico, creando atmosferas únicas.",
+      "Productor visionario que fusiona sonidos electronicos con la esencia del rap clasico, creando atmosferas unicas.",
     genre: "Hip Hop",
     event: "808",
     backgroundImage: "/assets/artists/beleuve2.jpg",
@@ -41,7 +41,7 @@ export const ARTISTS: Artist[] = [
     id: "3",
     name: "Xkarlex",
     description:
-      "Lírico incendiario con un estilo único que combina trap melódico con mensajes profundos del underground.",
+      "Lirico incendiario con un estilo unico que combina trap melodico con mensajes profundos del underground.",
     genre: "Trap",
     event: "808",
     backgroundImage: "/assets/artists/xkarlex2.jpg",
@@ -54,7 +54,7 @@ export const ARTISTS: Artist[] = [
     id: "4",
     name: "Khatarsis de la Soul",
     description:
-      "Colectivo que explora los límites del soul y el hip hop, llevando el público a un viaje emocional intenso.",
+      "Colectivo que explora los limites del soul y el hip hop, llevando el publico a un viaje emocional intenso.",
     genre: "Soul Hip Hop",
     event: "808",
     backgroundImage: "/assets/artists/katharsis1.jpg",
@@ -91,7 +91,7 @@ export const ARTISTS: Artist[] = [
   {
     id: "7",
     name: "Icee Fran",
-    description: "Algo fresco, algo único, llegando desde el cometa.",
+    description: "Algo fresco, algo unico, llegando desde el cometa.",
     genre: "Trap",
     event: "808",
     backgroundImage: "/assets/artists/fran1.jpeg",
@@ -117,7 +117,7 @@ export const ARTISTS: Artist[] = [
     id: "9",
     name: "Time Disorder",
     description:
-      "Proyecto que distorsiona el tiempo y el espacio a través de beats complejos y narrativas futuristas.",
+      "Proyecto que distorsiona el tiempo y el espacio a traves de beats complejos y narrativas futuristas.",
     genre: "Metal",
     event: "AM",
     backgroundImage: "/assets/artists/timedisorder1.jpeg",
@@ -130,7 +130,7 @@ export const ARTISTS: Artist[] = [
     id: "10",
     name: "Enigma la Leyenda",
     description:
-      "Figura misteriosa del underground que trae historias épicas envueltas en melodías hipnóticas.",
+      "Figura misteriosa del underground que trae historias epicas envueltas en melodias hipnoticas.",
     genre: "Rap",
     event: "AM",
     backgroundImage: "/assets/artists/enigma2.jpg",
@@ -143,7 +143,7 @@ export const ARTISTS: Artist[] = [
     id: "11",
     name: "DJ en Vivo",
     description:
-      "Maestro de las tornamesas que mantiene la energía en su punto máximo con sets únicos e irrepetibles.",
+      "Maestro de las tornamesas que mantiene la energia en su punto maximo con sets unicos e irrepetibles.",
     genre: "DJ Set",
     event: "808",
     backgroundImage: "/assets/artists/dj1.jpg",
@@ -155,7 +155,7 @@ export const ARTISTS: Artist[] = [
 
 export const PRICING: PriceItem[] = [
   {
-    item: "Granizado Clásico",
+    item: "Granizado Clasico",
     price: "$8.000",
     description: "Hielo raspado con tu jarabe favorito",
   },
@@ -165,7 +165,7 @@ export const PRICING: PriceItem[] = [
     description: "Con leche condensada y extras",
   },
   {
-    item: "Carne Asada - Porción",
+    item: "Carne Asada - Porcion",
     price: "$15.000",
     description: "Carne jugosa a la parrilla",
   },
@@ -180,17 +180,17 @@ export const MERCHANDISE: Merchandise[] = [
   {
     item: "Camiseta La Novena-1",
     price: "$35.000",
-    description: "Edición limitada del evento histórico",
+    description: "Edicion limitada del evento historico",
   },
   {
-    item: "Gorra 808 x Asado Místico",
+    item: "Gorra 808 x Asado Mistico",
     price: "$25.000",
-    description: "Colaboración exclusiva",
+    description: "Colaboracion exclusiva",
   },
   {
     item: "Stickers Pack",
     price: "$8.000",
-    description: "Colección de stickers underground",
+    description: "Coleccion de stickers underground",
   },
   {
     item: "Poster Conmemorativo",
@@ -204,14 +204,14 @@ export const ORGANIZERS: Organizer[] = [
     name: "Mirola",
     role: "Co-Organizador Principal",
     description:
-      "Visionario detrás de La Novena-1, conectando culturas y creando experiencias inolvidables.",
+      "Visionario detras de La Novena-1, conectando culturas y creando experiencias inolvidables.",
     instagram: "https://instagram.com/mirola",
   },
   {
     name: "DavidMS",
     role: "Director Creativo",
     description:
-      "Mente maestra de la producción, llevando cada detalle a la perfección.",
+      "Mente maestra de la produccion, llevando cada detalle a la perfeccion.",
     instagram: "https://instagram.com/davidms",
   },
   {
@@ -222,19 +222,19 @@ export const ORGANIZERS: Organizer[] = [
   },
   {
     name: "Andrew",
-    role: "Producción Técnica",
+    role: "Produccion Tecnica",
     description: "Arquitecto del sonido y la experiencia audiovisual.",
     instagram: "https://instagram.com/andrew",
   },
   {
     name: "Gundam",
-    role: "Logística y Operaciones",
-    description: "El cerebro detrás de la organización impecable del evento.",
+    role: "Logistica y Operaciones",
+    description: "El cerebro detras de la organizacion impecable del evento.",
     instagram: "https://instagram.com/gundam",
   },
   {
     name: "Oasis Ticket JPSSND",
-    role: "Gestión de Boletas",
+    role: "Gestion de Boletas",
     description:
       "Garantizando que cada asistente tenga su lugar en la historia.",
     instagram: "https://instagram.com/oasisticket",

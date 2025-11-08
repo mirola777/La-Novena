@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Clock, MapPin, Navigation } from "lucide-react";
+import { Clock, MapPin } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";
 import { ParallaxSection } from "../ui/ParallaxSection";
@@ -57,7 +57,7 @@ export function LocationSection() {
               viewport={{ once: true }}
               className="text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white mb-8 tracking-tight"
             >
-              UBICA<span className="text-green-400">CIÓN</span>
+              UBICA<span className="text-green-400">CION</span>
             </motion.h2>
             <motion.p
               initial={{ y: 20, opacity: 0 }}
@@ -104,13 +104,13 @@ export function LocationSection() {
                   </motion.div>
                   <div>
                     <h3 className="text-2xl md:text-3xl font-abolition font-bold text-white mb-3 tracking-wide">
-                      DIRECCIÓN
+                      DIRECCION
                     </h3>
                     <p className="text-xl md:text-2xl text-green-400 font-light mb-3">
                       Puente de la 4 Sur
                     </p>
                     <p className="text-lg text-gray-400 font-light">
-                      Carrera 50C 1 Sur 43, Medellín
+                      Carrera 50C 1 Sur 43, Medellin
                     </p>
                   </div>
                 </div>
@@ -161,50 +161,6 @@ export function LocationSection() {
                 </div>
               </motion.div>
             </ScrollReveal>
-
-            <ScrollReveal direction="left" delay={0.4}>
-              <motion.div
-                whileHover={{ scale: 1.05, x: 10 }}
-                className="p-10 border-2 border-green-400/30 rounded-2xl bg-black/60 backdrop-blur-sm relative overflow-hidden group"
-              >
-                <motion.div
-                  className="absolute inset-0 bg-linear-to-r from-green-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  animate={{
-                    x: ["-100%", "100%"],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "linear",
-                    delay: 1,
-                  }}
-                />
-                <div className="flex items-start gap-6 relative z-10">
-                  <motion.div
-                    animate={{
-                      y: [0, -10, 0],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <Navigation className="w-8 h-8 text-green-400 shrink-0 mt-1" />
-                  </motion.div>
-                  <div>
-                    <h3 className="text-2xl md:text-3xl font-abolition font-bold text-white mb-3 tracking-wide">
-                      TRANSPORTE
-                    </h3>
-                    <div className="text-lg text-gray-400 font-light space-y-2">
-                      <p>Metro: Estación Aguacatala</p>
-                      <p>Uber/DiDi disponible</p>
-                      <p>Parqueadero en la zona</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </ScrollReveal>
           </motion.div>
 
           <ScrollReveal direction="right">
@@ -244,10 +200,10 @@ export function LocationSection() {
                 className="mt-12 text-center"
               >
                 <h3 className="text-3xl md:text-4xl font-abolition font-bold text-green-400 mb-8">
-                  El Corazón del Underground
+                  El Corazon del Underground
                 </h3>
                 <p className="text-xl text-gray-400 font-light leading-relaxed">
-                  Un lugar icónico donde la música, la comida y la cultura
+                  Un lugar iconico donde la musica, la comida y la cultura
                   urbana se encuentran para crear algo legendario.
                 </p>
               </motion.div>
