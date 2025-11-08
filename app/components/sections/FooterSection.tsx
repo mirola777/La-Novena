@@ -110,35 +110,109 @@ export function FooterSection() {
                 className="w-20 h-20 object-contain no-select filter-none"
               />
               <p
-                className="text-gray-400 text-base md:text-lg"
+                className="text-gray-400 text-base md:text-lg leading-relaxed"
                 style={{ marginBottom: "2rem" }}
               >
-                Nace en 2018 como un plan tranquilo entre amigos. Con el tiempo,
-                evoluciono hasta convertirse en lo que es hoy: un espacio donde
-                la buena comida, los granizados artesanales y la parrilla
-                nocturna se unen para crear momentos inolvidables.
+                Todo comenzo en 2018 con un plan simple: reunir a los amigos del
+                colegio para celebrar el paso de ano. De noveno a decimo, de
+                decimo a once... Asados entre compas organizados por David
+                Santiago &ldquo;Polar&rdquo; en su casa. Cuando llego la
+                pandemia, solo los seis reales del Asado Mistico lograron
+                reunirse. Para 2021, abrimos las puertas a mas gente en lo que
+                seria el ultimo asado de Polar. Mirola tomo el mando en 2022 y
+                transformo su casa en el epicentro del primer Asado Mistico
+                oficial. Invito a todo el barrio y trajeron artistas de
+                Copacabana liderados por Gundam y la Somergang. Fue tan epico
+                que hasta llego la policia. En 2023 se sumo el Bachatombo, y
+                2024 se consolido como el mejor asado hasta la fecha con Time
+                Disorder, LD, Somergang, y mas. Ahora en 2025, nos unimos con
+                808 Fest para romper todos los esquemas. La historia continua.
               </p>
-              <div className="grid grid-cols-2 gap-4 w-full">
+              <div className="grid grid-cols-3 gap-4 w-full">
                 <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
                   <Image
-                    src="/assets/artists/beleuve1.jpg"
-                    alt="Gallery"
+                    src="/assets/am/am1.jpg"
+                    alt="Asado Mistico"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
                   <Image
-                    src="/assets/artists/dj1.jpg"
-                    alt="Gallery"
+                    src="/assets/am/am2.jpg"
+                    alt="Asado Mistico"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
                   <Image
-                    src="/assets/artists/enigma1.jpg"
-                    alt="Gallery"
+                    src="/assets/am/am3.jpg"
+                    alt="Asado Mistico"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
+                  <Image
+                    src="/assets/am/am4.jpg"
+                    alt="Asado Mistico"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
+                  <Image
+                    src="/assets/am/am5.jpg"
+                    alt="Asado Mistico"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
+                  <Image
+                    src="/assets/am/am6.jpg"
+                    alt="Asado Mistico"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
+                  <Image
+                    src="/assets/am/am7.jpg"
+                    alt="Asado Mistico"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
+                  <Image
+                    src="/assets/am/am8.jpg"
+                    alt="Asado Mistico"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
+                  <Image
+                    src="/assets/am/am9.jpg"
+                    alt="Asado Mistico"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
+                  <Image
+                    src="/assets/am/am10.jpg"
+                    alt="Asado Mistico"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
+                  <Image
+                    src="/assets/am/am11.jpg"
+                    alt="Asado Mistico"
                     fill
                     className="object-cover"
                   />
@@ -160,14 +234,19 @@ export function FooterSection() {
                 className="w-20 h-20 object-contain no-select filter-none"
               />
               <p
-                className="text-gray-400 text-base md:text-lg"
+                className="text-gray-400 text-base md:text-lg leading-relaxed"
                 style={{ marginBottom: "2rem" }}
               >
-                Nace en 2022 de la mano de EnMed. Un festival que celebra la
-                musica electronica, el hip hop y la cultura urbana, creando un
-                espacio unico para los amantes del underground en Medellin.
+                Un evento underground que trae lo mejor del urbano desde toda
+                Colombia. Artistas de Bogota, Barranquilla y Medellin se unen en
+                una misma tarima. Organizado por EnMed junto con Oasis Ticket,
+                bajo el liderazgo de David MS como CEO principal, acompanado del
+                equipo completo de EnMed: Xcarlex, VLV, Maker, 2Z y mas. Desde
+                2022, 808 Fest se ha consolidado como el punto de encuentro del
+                hip hop y la musica electronica en la escena underground de la
+                ciudad.
               </p>
-              <div className="grid grid-cols-2 gap-4 w-full">
+              <div className="grid grid-cols-3 gap-4 w-full">
                 <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
                   <Image
                     src="/assets/artists/fran1.jpeg"
@@ -242,14 +321,14 @@ export function FooterSection() {
                 }}
               >
                 <a
-                  href="https://www.instagram.com/asadomistico/"
+                  href="https://www.instagram.com/asado.mistico/?__pwa=1"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
                     display: "flex",
                     alignItems: "center",
                     gap: "0.5rem",
-                    color: "#9ca3af", // text-gray-400
+                    color: "#9ca3af",
                     transition: "color 0.3s",
                   }}
                   onMouseEnter={(e) =>
@@ -269,19 +348,19 @@ export function FooterSection() {
                   <span style={{ fontSize: "1.125rem" }}>@asadomistico</span>
                 </a>
                 <a
-                  href="https://www.instagram.com/808festmde/"
+                  href="https://www.instagram.com/808festoficial/?__pwa=1"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
                     display: "flex",
                     alignItems: "center",
                     gap: "0.5rem",
-                    color: "#9ca3af", // text-gray-400
+                    color: "#9ca3af",
                     transition: "color 0.3s",
                   }}
                   onMouseEnter={(e) =>
                     (e.currentTarget.style.color = "#22c55e")
-                  } // Hover effect
+                  }
                   onMouseLeave={(e) =>
                     (e.currentTarget.style.color = "#9ca3af")
                   }
@@ -293,7 +372,7 @@ export function FooterSection() {
                   >
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                   </svg>
-                  <span style={{ fontSize: "1.125rem" }}>@808festmde</span>
+                  <span style={{ fontSize: "1.125rem" }}>@808festoficial</span>
                 </a>
               </div>
             </div>

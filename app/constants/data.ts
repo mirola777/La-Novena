@@ -1,4 +1,4 @@
-import { Artist, EventInfo, Merchandise, Organizer, PriceItem } from "../types";
+import { Artist, EventInfo, Organizer, PriceItem } from "../types";
 
 export const EVENT_DATE = new Date("2025-12-06T18:00:00");
 
@@ -130,8 +130,8 @@ export const ARTISTS: Artist[] = [
     id: "10",
     name: "Enigma la Leyenda",
     description:
-      "Figura misteriosa del underground que trae historias epicas envueltas en melodias hipnoticas.",
-    genre: "Rap",
+      "Artista de Medellin con un largo recorrido en los freestyles, respaldado por grandes como Ryan Castro, J Balvin y Dimelo King. Su musica fusiona generos como trap, rap y R&B, contando historias epicas envueltas en melodias hipnoticas.",
+    genre: "Trap, Rap, R&B",
     event: "AM",
     backgroundImage: "/assets/artists/enigma2.jpg",
     profileImage: "/assets/artists/enigma1.jpg",
@@ -155,94 +155,95 @@ export const ARTISTS: Artist[] = [
 
 export const PRICING: PriceItem[] = [
   {
-    item: "Granizado Clasico",
-    price: "$8.000",
-    description: "Hielo raspado con tu jarabe favorito",
-  },
-  {
-    item: "Granizado Premium",
-    price: "$12.000",
-    description: "Con leche condensada y extras",
-  },
-  {
-    item: "Carne Asada - Porcion",
+    item: "Granizado",
     price: "$15.000",
-    description: "Carne jugosa a la parrilla",
+    description: "Hielo raspado artesanal",
+  },
+  {
+    item: "2 Granizados",
+    price: "$25.000",
+    description: "Comparte con un amigo",
+  },
+  {
+    item: "Carne con Porcion",
+    price: "$15.000",
+    description: "Carne, papas, gaseosa y arepa",
   },
   {
     item: "Combo Completo",
-    price: "$25.000",
-    description: "Carne + granizado + bebida",
-  },
-];
-
-export const MERCHANDISE: Merchandise[] = [
-  {
-    item: "Camiseta La Novena-1",
-    price: "$35.000",
-    description: "Edicion limitada del evento historico",
+    price: "$30.000",
+    description: "Granizado + carne con porcion",
   },
   {
-    item: "Gorra 808 x Asado Mistico",
-    price: "$25.000",
+    item: "Llaveros Conmemorativos",
+    price: "$8.000",
+    description: "Edicion La Novena-1",
+  },
+  {
+    item: "Gorras 808 x Asado Mistico",
+    price: "$40.000",
     description: "Colaboracion exclusiva",
   },
   {
-    item: "Stickers Pack",
-    price: "$8.000",
-    description: "Coleccion de stickers underground",
-  },
-  {
-    item: "Poster Conmemorativo",
-    price: "$15.000",
-    description: "Arte oficial del evento",
+    item: "Camisetas del Evento",
+    price: "$25.000",
+    description: "Edicion limitada",
   },
 ];
-
 export const ORGANIZERS: Organizer[] = [
   {
     name: "Mirola",
-    role: "Co-Organizador Principal",
+    role: "Organizador del Asado Mistico",
     description:
-      "Visionario detras de La Novena-1, conectando culturas y creando experiencias inolvidables.",
-    instagram: "https://instagram.com/mirola",
+      "La cara del Asado Mistico. Desde 2022 transformo su casa en el epicentro del underground.",
+    instagram: "https://www.instagram.com/mirola777/?__pwa=1",
   },
   {
     name: "DavidMS",
-    role: "Director Creativo",
+    role: "CEO del 808 Fest",
     description:
-      "Mente maestra de la produccion, llevando cada detalle a la perfeccion.",
-    instagram: "https://instagram.com/davidms",
+      "Lider principal del 808 Fest, organizando el mejor urbano underground desde 2022.",
+    instagram: "https://www.instagram.com/thekingdavidms/?__pwa=1",
   },
   {
-    name: "Tussi",
-    role: "Coordinador de Artistas",
-    description: "El enlace perfecto entre el talento y el escenario.",
-    instagram: "https://instagram.com/tussi",
+    name: "22ce",
+    role: "Equipo ENMED",
+    description:
+      "El que presta la casa, hace las gestiones complicadas y se mueve en el bajo mundo.",
+    instagram: "https://www.instagram.com/22doce__/?__pwa=1",
   },
   {
     name: "Andrew",
-    role: "Produccion Tecnica",
-    description: "Arquitecto del sonido y la experiencia audiovisual.",
-    instagram: "https://instagram.com/andrew",
+    role: "Productor Musical y Sonido",
+    description:
+      "El productor musical con el que todo el mundo tiene confianza. Encargado del sonido.",
+    instagram: "https://www.instagram.com/andreeew._flp/?__pwa=1",
+  },
+  {
+    name: "JPSSND",
+    role: "Ingeniero de Sonido",
+    description:
+      "Junto con Andrew, los locos que mueven el sonido del evento. También te crackea el FL Studio en 5 minutos.",
+    instagram: "https://www.instagram.com/jpssnd/?__pwa=1",
   },
   {
     name: "Gundam",
-    role: "Logistica y Operaciones",
-    description: "El cerebro detras de la organizacion impecable del evento.",
-    instagram: "https://instagram.com/gundam",
-  },
-  {
-    name: "Oasis Ticket JPSSND",
-    role: "Gestion de Boletas",
+    role: "Jefe de Logistica",
     description:
-      "Garantizando que cada asistente tenga su lugar en la historia.",
-    instagram: "https://instagram.com/oasisticket",
+      "El sujeto de logistica. Trae contactos raros, conoce a todo el mundo. Literalmente te trae 3 enanos sin pensar.",
+    instagram: "https://www.instagram.com/gundamsb/?__pwa=1",
   },
   {
     name: "Meyker",
-    role: "Marketing y Comunicaciones",
-    description: "Difundiendo la palabra del underground a toda la ciudad.",
-    instagram: "https://instagram.com/meyker",
+    role: "Director de Streaming",
+    description: "Organizando toda la transmision del evento en vivo por Kick.",
+    instagram: "https://www.instagram.com/meyker0312/?__pwa=1",
+  },
+  {
+    name: "Oasis Ticket",
+    role: "Colaborador y Gestion",
+    description:
+      "Colaborador del asado en la gestion y organizacion del evento.",
+    instagram: "https://www.instagram.com/oasislive_col/?__pwa=1",
   },
 ];

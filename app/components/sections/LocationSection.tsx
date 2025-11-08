@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Clock, MapPin } from "lucide-react";
+import Image from "next/image";
 import { useRef } from "react";
 import { ScrollReveal } from "../ui/ScrollReveal";
 
@@ -156,7 +157,14 @@ export function LocationSection() {
               style={{ y: useTransform(scrollYProgress, [0, 1], [50, -50]) }}
               className="relative"
             >
-              <div className="relative w-full aspect-square overflow-hidden rounded-2xl border-2 border-green-400/30 bg-green-400/5"></div>
+              <div className="relative w-full aspect-square overflow-hidden rounded-2xl border-2 border-green-400/30 bg-green-400/5">
+                <Image
+                  src="/assets/spot.png"
+                  alt="Puente de la 4 Sur"
+                  fill
+                  className="object-cover object-center"
+                />
+              </div>
             </motion.div>
           </ScrollReveal>
         </div>
