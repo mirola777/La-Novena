@@ -15,7 +15,7 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-[200vh] flex items-start justify-center overflow-hidden">
-      <div className="sticky top-0 w-full h-screen flex items-center justify-center bg-amber-50">
+      <div className="sticky top-0 w-full h-screen flex items-center justify-center ">
         <ParallaxSection speed={0.3} className="absolute inset-0">
           <motion.div
             style={{ y: backgroundY, scale: backgroundScale }}
@@ -240,7 +240,7 @@ export function HeroSection() {
                 alt="Patrocinadores"
                 width={800}
                 height={100}
-                className="w-auto h-10 md:h-12 lg:h-16 object-contain no-select opacity-60"
+                className="w-auto h-10 md:h-12 lg:h-16 object-contain no-select"
               />
             </div>
           </motion.div>

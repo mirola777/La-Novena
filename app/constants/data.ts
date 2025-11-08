@@ -133,8 +133,8 @@ export const ARTISTS: Artist[] = [
       "Figura misteriosa del underground que trae historias épicas envueltas en melodías hipnóticas.",
     genre: "Rap",
     event: "AM",
-    backgroundImage: "/assets/artists/enigma1.jpg",
-    profileImage: "/assets/artists/enigma2.jpg",
+    backgroundImage: "/assets/artists/enigma2.jpg",
+    profileImage: "/assets/artists/enigma1.jpg",
     spotify:
       "https://open.spotify.com/intl-es/artist/06viAd3ixNHnkWjLglSsLA?si=80E60N_qSI6Ubm5Xr8MASA",
     instagram: "https://www.instagram.com/enigma.la.leyenda/?__pwa=1",

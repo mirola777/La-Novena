@@ -6,8 +6,8 @@ import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function SpotifySection() {
   return (
-    <section className="bg-linear-to-b from-black via-gray-900 to-black py-20">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+    <section className="bg-linear-to-b from-black to-black py-20">
+      <div className=" mx-auto px-4 md:px-6 lg:px-8 flex flex-col items-center">
         <ScrollReveal direction="up">
           <div className="text-center mb-12">
             <motion.div
@@ -35,7 +35,7 @@ export function SpotifySection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto"
+            className="max-w-3xl  mx-auto"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-green-400/20 border-2 border-green-400/30 bg-black/50 backdrop-blur-sm p-4 md:p-6">
               <iframe
