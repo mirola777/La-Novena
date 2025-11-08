@@ -61,7 +61,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
     <motion.div
       ref={ref}
       style={{ opacity }}
-      className="min-h-screen flex items-center justify-center px-6 md:px-8 lg:px-12 relative overflow-hidden py-20"
+      className="min-h-screen flex items-center justify-center px-6 md:px-8 lg:px-12 relative overflow-hidden py-20 w-screen"
     >
       <motion.div style={{ y: backgroundY }} className="absolute inset-0">
         <Image
