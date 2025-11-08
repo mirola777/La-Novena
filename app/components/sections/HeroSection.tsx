@@ -27,7 +27,6 @@ export function HeroSection() {
               fill
               className="object-cover object-center no-select"
               priority
-              quality={100}
             />
             <div className="absolute inset-0 bg-black/60" />
           </motion.div>
@@ -113,12 +112,12 @@ export function HeroSection() {
                   </p>
                 </motion.div>
 
-                <div className="grid grid-cols-2 gap-6 md:gap-8 lg:gap-10">
+                <div className="flex items-center justify-center gap-3 md:gap-4 lg:gap-6 flex-wrap">
                   <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 1.8 }}
-                    className="text-center p-6 md:p-8 bg-black/40 backdrop-blur-sm border-2 border-green-400/30 rounded-2xl"
+                    className="flex items-center gap-2"
                   >
                     <motion.div
                       animate={{
@@ -129,20 +128,24 @@ export function HeroSection() {
                         repeat: Infinity,
                         ease: "easeInOut",
                       }}
-                      className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-abolition font-black text-white mb-3"
+                      className="text-4xl md:text-5xl lg:text-6xl font-abolition font-black text-white"
                     >
                       {timeLeft.days.toString().padStart(2, "0")}
                     </motion.div>
-                    <div className="text-sm md:text-base lg:text-lg text-green-400 uppercase tracking-widest font-bold">
-                      Días
+                    <div className="text-xs md:text-sm text-green-400 uppercase tracking-wider font-bold">
+                      D
                     </div>
                   </motion.div>
+
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-abolition text-green-400">
+                    :
+                  </div>
 
                   <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 2 }}
-                    className="text-center p-6 md:p-8 bg-black/40 backdrop-blur-sm border-2 border-green-400/30 rounded-2xl"
+                    className="flex items-center gap-2"
                   >
                     <motion.div
                       animate={{
@@ -154,20 +157,24 @@ export function HeroSection() {
                         ease: "easeInOut",
                         delay: 0.3,
                       }}
-                      className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-abolition font-black text-white mb-3"
+                      className="text-4xl md:text-5xl lg:text-6xl font-abolition font-black text-white"
                     >
                       {timeLeft.hours.toString().padStart(2, "0")}
                     </motion.div>
-                    <div className="text-sm md:text-base lg:text-lg text-green-400 uppercase tracking-widest font-bold">
-                      Horas
+                    <div className="text-xs md:text-sm text-green-400 uppercase tracking-wider font-bold">
+                      H
                     </div>
                   </motion.div>
+
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-abolition text-green-400">
+                    :
+                  </div>
 
                   <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 2.2 }}
-                    className="text-center p-6 md:p-8 bg-black/40 backdrop-blur-sm border-2 border-green-400/30 rounded-2xl"
+                    className="flex items-center gap-2"
                   >
                     <motion.div
                       animate={{
@@ -179,32 +186,25 @@ export function HeroSection() {
                         ease: "easeInOut",
                         delay: 0.6,
                       }}
-                      className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-abolition font-black text-white mb-3"
+                      className="text-4xl md:text-5xl lg:text-6xl font-abolition font-black text-white"
                     >
                       {timeLeft.minutes.toString().padStart(2, "0")}
                     </motion.div>
-                    <div className="text-sm md:text-base lg:text-lg text-green-400 uppercase tracking-widest font-bold">
-                      Minutos
+                    <div className="text-xs md:text-sm text-green-400 uppercase tracking-wider font-bold">
+                      M
                     </div>
                   </motion.div>
+
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-abolition text-green-400">
+                    :
+                  </div>
 
                   <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 2.4 }}
-                    className="text-center p-6 md:p-8 bg-black/40 backdrop-blur-sm border-2 border-green-400/50 rounded-2xl relative overflow-hidden"
+                    className="flex items-center gap-2"
                   >
-                    <motion.div
-                      animate={{
-                        opacity: [0.3, 0.6, 0.3],
-                      }}
-                      transition={{
-                        duration: 1.5,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
-                      className="absolute inset-0 bg-green-400/10"
-                    />
                     <motion.div
                       animate={{
                         scale: [1, 1.1, 1],
@@ -214,12 +214,12 @@ export function HeroSection() {
                         repeat: Infinity,
                         ease: "easeInOut",
                       }}
-                      className="relative text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-abolition font-black text-green-400 mb-3"
+                      className="text-4xl md:text-5xl lg:text-6xl font-abolition font-black text-green-400"
                     >
                       {timeLeft.seconds.toString().padStart(2, "0")}
                     </motion.div>
-                    <div className="relative text-sm md:text-base lg:text-lg text-green-400 uppercase tracking-widest font-bold">
-                      Segundos
+                    <div className="text-xs md:text-sm text-green-400 uppercase tracking-wider font-bold">
+                      S
                     </div>
                   </motion.div>
                 </div>

@@ -7,6 +7,7 @@ import { HeroSection } from "./components/sections/HeroSection";
 import { LocationSection } from "./components/sections/LocationSection";
 import { OrganizersSection } from "./components/sections/OrganizersSection";
 import { PricingSection } from "./components/sections/PricingSection";
+import { SpotifySection } from "./components/sections/SpotifySection";
 import { AudioPlayer } from "./components/ui/AudioPlayer";
 import { Navbar } from "./components/ui/Navbar";
 
@@ -19,6 +20,9 @@ export default function Home() {
         <HeroSection />
         <div className="py-16 md:py-24 lg:py-32">
           <ArtistsSection />
+        </div>
+        <div className="py-16 md:py-24 lg:py-32">
+          <SpotifySection />
         </div>
         <div className="py-16 md:py-24 lg:py-32">
           <PricingSection />

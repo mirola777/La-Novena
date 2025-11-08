@@ -18,8 +18,11 @@ export const ARTISTS: Artist[] = [
       "Maestro del flow underground, Juan One trae beats que sacuden el alma y letras que cuentan la verdadera historia de las calles.",
     genre: "Hip Hop",
     event: "808",
-    spotify: "https://open.spotify.com/artist/juanone",
-    instagram: "https://instagram.com/juanone",
+    backgroundImage: "/assets/artists/juanone1.JPG",
+    profileImage: "/assets/artists/juanone2.JPG",
+    spotify:
+      "https://open.spotify.com/intl-es/artist/3xe1fd5uyPEOhXky8O6xxC?si=5v2C7qfHRTGEkccvmTgFQA",
+    instagram: "https://www.instagram.com/freejuanone/?__pwa=1",
   },
   {
     id: "2",
@@ -28,8 +31,11 @@ export const ARTISTS: Artist[] = [
       "Productor visionario que fusiona sonidos electrónicos con la esencia del rap clásico, creando atmosferas únicas.",
     genre: "Hip Hop",
     event: "808",
-    spotify: "https://open.spotify.com/artist/beleuve",
-    instagram: "https://instagram.com/beleuve",
+    backgroundImage: "/assets/artists/beleuve2.jpg",
+    profileImage: "/assets/artists/beleuve1.jpg",
+    spotify:
+      "https://open.spotify.com/intl-es/artist/4ddoETHVB138u7HVWsj9QO?si=fT7mSgMQTZicnBtaNIiNjQ",
+    instagram: "https://www.instagram.com/beleuvee/?__pwa=1",
   },
   {
     id: "3",
@@ -38,8 +44,11 @@ export const ARTISTS: Artist[] = [
       "Lírico incendiario con un estilo único que combina trap melódico con mensajes profundos del underground.",
     genre: "Trap",
     event: "808",
-    spotify: "https://open.spotify.com/artist/xkarlex",
-    instagram: "https://instagram.com/xkarlex",
+    backgroundImage: "/assets/artists/xkarlex2.jpg",
+    profileImage: "/assets/artists/xkarlex1.jpg",
+    spotify:
+      "https://open.spotify.com/intl-es/artist/0S9Pso1CDm5omKJXQqEild?si=klvSAQEOSS27F4i7fvSDUw",
+    instagram: "https://www.instagram.com/xkarlex_/?__pwa=1",
   },
   {
     id: "4",
@@ -48,8 +57,11 @@ export const ARTISTS: Artist[] = [
       "Colectivo que explora los límites del soul y el hip hop, llevando el público a un viaje emocional intenso.",
     genre: "Soul Hip Hop",
     event: "808",
-    spotify: "https://open.spotify.com/artist/khatarsis",
-    instagram: "https://instagram.com/khatarsis",
+    backgroundImage: "/assets/artists/katharsis1.jpg",
+    profileImage: "/assets/artists/katharsis2.jpg",
+    spotify:
+      "https://open.spotify.com/intl-es/artist/59f9kXbdGuM6EDKEtwpeu7?si=jzVGzD_BS0Kj8w_Cn49O9A",
+    instagram: "https://www.instagram.com/katharsisdelasoul/?__pwa=1",
   },
   {
     id: "5",
@@ -57,10 +69,11 @@ export const ARTISTS: Artist[] = [
     description: "La misma vuelta, pero mas facil.",
     genre: "Trap",
     event: "AM",
-    backgroundImage: "/assets/artists/jacko1.jpg",
+    backgroundImage: "/assets/artists/jacko1.jpeg",
     profileImage: "/assets/artists/jacko2.jpg",
-    spotify: "https://open.spotify.com/artist/jacko",
-    instagram: "https://instagram.com/jacko",
+    spotify:
+      "https://open.spotify.com/intl-es/artist/6aJHStGhn53zB9k4dhyIR3?si=_pp8ZCzWT1S8zdXx-BuKzQ",
+    instagram: "https://www.instagram.com/jackaotic/?__pwa=1",
   },
   {
     id: "6",
@@ -69,18 +82,23 @@ export const ARTISTS: Artist[] = [
       "Artista innovador que mezcla elementos del reggaeton underground con beats experimentales.",
     genre: "Urbano Experimental",
     event: "808",
-    spotify: "https://open.spotify.com/artist/jpssno",
-    instagram: "https://instagram.com/jpssno",
+    backgroundImage: "/assets/artists/jp2.jpg",
+    profileImage: "/assets/artists/jp1.jpg",
+    spotify:
+      "https://open.spotify.com/intl-es/artist/6WgiOO4ma4Wqrdyfvg8Kck?si=8qYMtRzwSRqvYL7cB_fhtg",
+    instagram: "https://www.instagram.com/jpssnd/?__pwa=1",
   },
   {
     id: "7",
     name: "Icee Fran",
-    description:
-      "MC helado que quema el escenario con rimas afiladas y una presencia escénica magnética.",
-    genre: "Rap",
+    description: "Algo fresco, algo único, llegando desde el cometa.",
+    genre: "Trap",
     event: "808",
-    spotify: "https://open.spotify.com/artist/iceefran",
-    instagram: "https://instagram.com/iceefran",
+    backgroundImage: "/assets/artists/fran1.jpeg",
+    profileImage: "/assets/artists/fran2.jpeg",
+    spotify:
+      "https://open.spotify.com/intl-es/artist/5vNa6nTxz2lwJaa5OO0FgB?si=iw95BT1QQNSd5DBYzb3VNw",
+    instagram: "https://www.instagram.com/iceefran/?__pwa=1",
   },
   {
     id: "8",
@@ -91,8 +109,9 @@ export const ARTISTS: Artist[] = [
     event: "AM",
     backgroundImage: "/assets/artists/saintmadonna1.jpg",
     profileImage: "/assets/artists/saintmadonna2.jpg",
-    spotify: "https://open.spotify.com/artist/saintmadonna",
-    instagram: "https://instagram.com/saintmadonna",
+    spotify:
+      "https://open.spotify.com/intl-es/artist/5pjzKgJ1qKQK2G2eCm4VBt?si=2-0bViaJQmyMsUBGh3sXYg",
+    instagram: "https://www.instagram.com/saintmadonna.x/?__pwa=1",
   },
   {
     id: "9",
@@ -103,8 +122,9 @@ export const ARTISTS: Artist[] = [
     event: "AM",
     backgroundImage: "/assets/artists/timedisorder1.jpeg",
     profileImage: "/assets/artists/timedisorder2.jpeg",
-    spotify: "https://open.spotify.com/artist/timedisorder",
-    instagram: "https://instagram.com/timedisorder",
+    spotify:
+      "https://open.spotify.com/intl-es/artist/2FR5Qk9Dbv6isYx1jIeZbv?si=AUsZJbRESpaQR29kXAnPRg",
+    instagram: "https://www.instagram.com/time_disorder/?__pwa=1",
   },
   {
     id: "10",
@@ -115,8 +135,9 @@ export const ARTISTS: Artist[] = [
     event: "AM",
     backgroundImage: "/assets/artists/enigma1.jpg",
     profileImage: "/assets/artists/enigma2.jpg",
-    spotify: "https://open.spotify.com/artist/enigma",
-    instagram: "https://instagram.com/enigmaleyenda",
+    spotify:
+      "https://open.spotify.com/intl-es/artist/06viAd3ixNHnkWjLglSsLA?si=80E60N_qSI6Ubm5Xr8MASA",
+    instagram: "https://www.instagram.com/enigma.la.leyenda/?__pwa=1",
   },
   {
     id: "11",
@@ -125,6 +146,8 @@ export const ARTISTS: Artist[] = [
       "Maestro de las tornamesas que mantiene la energía en su punto máximo con sets únicos e irrepetibles.",
     genre: "DJ Set",
     event: "808",
+    backgroundImage: "/assets/artists/dj1.jpg",
+    profileImage: "/assets/artists/dj2.jpg",
     spotify: "https://open.spotify.com/artist/djenvivo",
     instagram: "https://instagram.com/djenvivo",
   },

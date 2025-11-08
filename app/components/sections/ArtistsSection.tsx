@@ -21,11 +21,11 @@ export function ArtistsSection() {
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1.2 }}
                 viewport={{ once: true }}
-                className="text-7xl md:text-9xl lg:text-[12rem] font-abolition font-black text-white mb-6 tracking-tight"
+                className="text-6xl md:text-7xl lg:text-8xl font-abolition font-black text-white mb-6 tracking-tight"
               >
                 LINE<span className="text-green-400">UP</span>
               </motion.h2>
-              <p className="text-xl md:text-3xl text-gray-400 font-light">
+              <p className="text-xl md:text-2xl text-gray-400 font-light">
                 Los artistas que van a hacer historia
               </p>
             </div>
@@ -34,44 +34,9 @@ export function ArtistsSection() {
       </div>
 
       {ARTISTS.map((artist, index) => (
-        <div key={artist.id}>
-          <ArtistCard artist={artist} index={index} />
-          {index < ARTISTS.length - 1 && <ArtistDivider />}
-        </div>
+        <ArtistCard key={artist.id} artist={artist} index={index} />
       ))}
     </section>
-  );
-}
-
-function ArtistDivider() {
-  return (
-    <div className="relative h-32 md:h-40 overflow-hidden">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="absolute inset-0 bg-linear-to-b from-black via-gray-900 to-black"
-      />
-      <motion.div
-        initial={{ scaleY: 0 }}
-        whileInView={{ scaleY: 1 }}
-        transition={{ duration: 1.5, ease: "easeInOut" }}
-        viewport={{ once: true }}
-        className="absolute left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-green-400/50 to-transparent transform -translate-x-1/2"
-      />
-      <motion.div
-        animate={{
-          y: ["-100%", "100%"],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="absolute left-1/2 w-2 h-20 bg-linear-to-b from-transparent via-green-400 to-transparent transform -translate-x-1/2 blur-sm"
-      />
-    </div>
   );
 }
 
@@ -104,7 +69,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
           alt=""
           fill
           className="object-cover object-center opacity-20 no-select"
-          quality={100}
+          priority={index === 0}
         />
         <div className="absolute inset-0 bg-linear-to-b from-black via-transparent to-black" />
       </motion.div>
@@ -143,7 +108,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
       <div className="max-w-6xl mx-auto w-full text-center relative z-10">
         <motion.div
           style={{ y, scale, rotate }}
-          className="space-y-6 md:space-y-10"
+          className="space-y-6 md:space-y-10 items-center justify-center flex flex-col"
         >
           <div className="relative">
             <motion.div
@@ -246,7 +211,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
             viewport={{ once: true }}
             className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto mt-12 overflow-hidden rounded-2xl group"
           >
-            <div className="relative w-full h-full">
+            <div className="relative w-full h-full flex items-center justify-center">
               <Image
                 src={artist.profileImage || "/assets/background.png"}
                 alt={artist.name}
