@@ -141,7 +141,7 @@ export const ARTISTS: Artist[] = [
   },
   {
     id: "11",
-    name: "DJ en Vivo",
+    name: "Scarlett",
     description:
       "Maestro de las tornamesas que mantiene la energia en su punto maximo con sets unicos e irrepetibles.",
     genre: "DJ Set",
@@ -149,7 +149,7 @@ export const ARTISTS: Artist[] = [
     backgroundImage: "/assets/artists/dj1.jpg",
     profileImage: "/assets/artists/dj2.jpg",
     spotify: "https://open.spotify.com/artist/djenvivo",
-    instagram: "https://instagram.com/djenvivo",
+    instagram: "https://www.instagram.com/scaaarletttttt/?__pwa=1",
   },
 ];
 
@@ -192,25 +192,37 @@ export const PRICING: PriceItem[] = [
 ];
 export const ORGANIZERS: Organizer[] = [
   {
+    name: "Que Parche",
+    role: "Patrocinador",
+    description: "App de eventos desarrollada por Gundam y Raven",
+    instagram: "https://www.instagram.com/queparche_app/?__pwa=1",
+  },
+  {
     name: "Mirola",
     role: "Organizador del Asado Mistico",
-    description:
-      "La cara del Asado Mistico. Desde 2022 transformo su casa en el epicentro del underground.",
+    description: "La cara del Asado Mistico desde 2022.",
     instagram: "https://www.instagram.com/mirola777/?__pwa=1",
   },
   {
     name: "DavidMS",
     role: "CEO del 808 Fest",
     description:
-      "Lider principal del 808 Fest, organizando el mejor urbano underground desde 2022.",
+      "Lider principal del 808 Fest, organizando el mejor urbano underground.",
     instagram: "https://www.instagram.com/thekingdavidms/?__pwa=1",
   },
   {
     name: "22ce",
-    role: "Equipo ENMED",
+    role: "Gestión y Trámites",
     description:
       "El que presta la casa, hace las gestiones complicadas y se mueve en el bajo mundo.",
     instagram: "https://www.instagram.com/22doce__/?__pwa=1",
+  },
+  {
+    name: "Franswa",
+    role: "Gestión y Trámites",
+    description:
+      "Es el que se mueve con los papeles junto a Oasis a cada lado.",
+    instagram: "https://www.instagram.com/juajua_fr/?__pwa=1",
   },
   {
     name: "Andrew",

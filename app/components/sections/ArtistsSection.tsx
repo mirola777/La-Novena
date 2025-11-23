@@ -178,7 +178,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
             </div>
           </div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -203,7 +203,7 @@ function ArtistCard({ artist, index }: { artist: Artist; index: number }) {
             className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light"
           >
             {artist.description}
-          </motion.p>
+          </motion.p> */}
 
           <motion.div
             initial={{ y: 50, opacity: 0 }}

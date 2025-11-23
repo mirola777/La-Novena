@@ -83,7 +83,7 @@ export function FooterSection() {
                 </div>
                 <div className="flex items-center gap-2 text-green-400">
                   <Clock className="w-5 h-5 md:w-6 md:h-6" />
-                  <span>7:00 PM - ???</span>
+                  <span>7:00 PM - Sabra Dios</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-400">
                   <MapPin className="w-5 h-5 md:w-6 md:h-6" />
@@ -99,7 +99,7 @@ export function FooterSection() {
             <motion.div
               whileHover={{ scale: 1.02 }}
               style={{ padding: "2rem" }}
-              className="text-center border border-green-400/30 rounded-lg bg-black/50 flex flex-col items-center justify-center"
+              className="text-center border border-green-400/30 rounded-lg bg-black/50 flex flex-col items-center justify-start"
             >
               <Image
                 src="/assets/AM.png"
@@ -128,7 +128,7 @@ export function FooterSection() {
                 Disorder, LD, Somergang, y mas. Ahora en 2025, nos unimos con
                 808 Fest para romper todos los esquemas. La historia continua.
               </p>
-              <div className="grid grid-cols-3 gap-4 w-full">
+              <div className="grid grid-cols-2 gap-4 w-full">
                 <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
                   <Image
                     src="/assets/am/am1.jpg"
@@ -171,14 +171,6 @@ export function FooterSection() {
                 </div>
                 <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
                   <Image
-                    src="/assets/am/am6.jpg"
-                    alt="Asado Mistico"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
-                  <Image
                     src="/assets/am/am7.jpg"
                     alt="Asado Mistico"
                     fill
@@ -187,23 +179,7 @@ export function FooterSection() {
                 </div>
                 <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
                   <Image
-                    src="/assets/am/am8.jpg"
-                    alt="Asado Mistico"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
-                  <Image
                     src="/assets/am/am9.jpg"
-                    alt="Asado Mistico"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
-                  <Image
-                    src="/assets/am/am10.jpg"
                     alt="Asado Mistico"
                     fill
                     className="object-cover"
@@ -223,7 +199,7 @@ export function FooterSection() {
             <motion.div
               whileHover={{ scale: 1.02 }}
               style={{ padding: "2rem" }}
-              className="text-center border border-green-400/30 rounded-lg bg-black/50 flex flex-col items-center justify-center"
+              className="text-center border border-green-400/30 rounded-lg bg-black/50 flex flex-col items-center justify-start"
             >
               <Image
                 src="/assets/808.png"
@@ -246,27 +222,51 @@ export function FooterSection() {
                 hip hop y la musica electronica en la escena underground de la
                 ciudad.
               </p>
-              <div className="grid grid-cols-3 gap-4 w-full">
+              <div className="grid grid-cols-2 gap-4 w-full">
                 <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
                   <Image
-                    src="/assets/artists/fran1.jpeg"
-                    alt="Gallery"
+                    src="/assets/808/808-1.jpeg"
+                    alt="808 Fest"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
                   <Image
-                    src="/assets/artists/jacko1.jpeg"
-                    alt="Gallery"
+                    src="/assets/808/808-2.jpeg"
+                    alt="808 Fest"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
                   <Image
-                    src="/assets/artists/jp1.jpg"
-                    alt="Gallery"
+                    src="/assets/808/808-3.jpeg"
+                    alt="808 Fest"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
+                  <Image
+                    src="/assets/808/808-4.jpeg"
+                    alt="808 Fest"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
+                  <Image
+                    src="/assets/808/808-5.jpeg"
+                    alt="808 Fest"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
+                  <Image
+                    src="/assets/808/808-6.jpeg"
+                    alt="808 Fest"
                     fill
                     className="object-cover"
                   />
@@ -389,24 +389,6 @@ export function FooterSection() {
               <p>© 2025 La Novena-1 • Asado Mistico × 808 Fest</p>
               <p>Medellin, Colombia</p>
             </div>
-
-            <motion.div
-              style={{ marginTop: "3rem" }}
-              animate={{
-                opacity: [0.6, 1, 0.6],
-              }}
-              transition={{ repeat: Infinity, duration: 3 }}
-            >
-              <span
-                style={{
-                  fontSize: "1.5rem", // text-2xl
-                  color: "#22c55e", // text-green-400
-                  fontWeight: "bold",
-                }}
-              >
-                Nos vemos en la historia!
-              </span>
-            </motion.div>
           </div>
         </ScrollReveal>
       </div>

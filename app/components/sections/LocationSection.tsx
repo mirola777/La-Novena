@@ -141,7 +141,7 @@ export function LocationSection() {
                       HORARIOS
                     </h3>
                     <p className="text-xl md:text-2xl text-green-400 font-light mb-2">
-                      7:00 PM - ???
+                      7:00 PM - Sabra Dios
                     </p>
                     <p className="text-lg text-gray-400 font-light">
                       Sabado 6 de Diciembre, 2025

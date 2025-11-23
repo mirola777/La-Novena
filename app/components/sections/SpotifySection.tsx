@@ -29,7 +29,7 @@ export function SpotifySection() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-green-400/10 rounded-full blur-3xl pointer-events-none"
+        className="absolute top-1/4 right-1/4 w-[600px] h-[300px] bg-green-400/10 rounded-full blur-3xl pointer-events-none"
       />
 
       <div className="max-w-7xl mx-auto relative z-10 w-full flex flex-col items-center justify-center">
@@ -63,7 +63,7 @@ export function SpotifySection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto w-full h-fit"
+            className="max-w-2xl mx-auto w-full h-full"
           >
             <div
               className="relative rounded-2xl overflow-hidden shadow-2xl shadow-green-400/20 border-2 border-green-400/30 bg-black/50 backdrop-blur-sm"
@@ -74,12 +74,12 @@ export function SpotifySection() {
                 style={{ borderRadius: "12px" }}
                 src="https://open.spotify.com/embed/playlist/20LX4TsCwrBVBiEDUnhBJC?utm_source=generator"
                 width="100%"
-                height="300"
+                height="600"
                 frameBorder="0"
                 allowFullScreen
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
-                className="w-full md:w-[600px] h-72 md:h-80 lg:h-96"
+                className="w-full md:w-[600px] "
               />
             </div>
           </motion.div>
