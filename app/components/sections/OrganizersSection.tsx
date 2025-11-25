@@ -1,13 +1,35 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 import { Instagram, Sparkles } from "lucide-react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ORGANIZERS } from "../../constants/data";
 import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function OrganizersSection() {
   const sectionRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const x = useMotionValue(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      x.set(x.get() - 1);
+
+      if (containerRef.current) {
+        const cardWidth = 384 + 48;
+        const totalWidth = cardWidth * ORGANIZERS.length;
+
+        if (Math.abs(x.get()) >= totalWidth) {
+          x.set(0);
+        }
+      }
+    }, 20);
+
+    return () => clearInterval(interval);
+  }, [isPaused, x]);
 
   return (
     <section
@@ -69,17 +91,19 @@ export function OrganizersSection() {
           </div>
         </ScrollReveal>
 
-        <div className="relative w-full">
+        <div className="relative w-full overflow-hidden">
+          <div className="absolute left-0 top-0 bottom-0 w-32 md:w-48 bg-linear-to-r from-black to-transparent z-20 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 md:w-48 bg-linear-to-l from-black to-transparent z-20 pointer-events-none" />
+
           <motion.div
-            animate={{
-              x: [0, -2000],
-            }}
-            transition={{
-              duration: 40,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-            className="flex gap-8 md:gap-12"
+            ref={containerRef}
+            drag="x"
+            dragConstraints={{ left: -ORGANIZERS.length * 432, right: 0 }}
+            dragElastic={0.1}
+            onDragStart={() => setIsPaused(true)}
+            onDragEnd={() => setIsPaused(false)}
+            style={{ x }}
+            className="flex gap-8 md:gap-12 cursor-grab active:cursor-grabbing"
           >
             {[...ORGANIZERS, ...ORGANIZERS, ...ORGANIZERS].map(
               (organizer, index) => (

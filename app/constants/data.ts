@@ -32,7 +32,7 @@ export const ARTISTS: Artist[] = [
     genre: "Hip Hop",
     event: "808",
     backgroundImage: "/assets/artists/beleuve2.jpg",
-    profileImage: "/assets/artists/beleuve1.jpg",
+    profileImage: "/assets/artists/beleuve1.png",
     spotify:
       "https://open.spotify.com/intl-es/artist/4ddoETHVB138u7HVWsj9QO?si=fT7mSgMQTZicnBtaNIiNjQ",
     instagram: "https://www.instagram.com/beleuvee/?__pwa=1",
@@ -212,14 +212,14 @@ export const ORGANIZERS: Organizer[] = [
   },
   {
     name: "22ce",
-    role: "Gestión y Trámites",
+    role: "Gestion y Tramites",
     description:
       "El que presta la casa, hace las gestiones complicadas y se mueve en el bajo mundo.",
     instagram: "https://www.instagram.com/22doce__/?__pwa=1",
   },
   {
     name: "Franswa",
-    role: "Gestión y Trámites",
+    role: "Gestion y Tramites",
     description:
       "Es el que se mueve con los papeles junto a Oasis a cada lado.",
     instagram: "https://www.instagram.com/juajua_fr/?__pwa=1",
@@ -235,7 +235,7 @@ export const ORGANIZERS: Organizer[] = [
     name: "JPSSND",
     role: "Ingeniero de Sonido",
     description:
-      "Junto con Andrew, los locos que mueven el sonido del evento. También te crackea el FL Studio en 5 minutos.",
+      "Junto con Andrew, los locos que mueven el sonido del evento. Tambien te crackea el FL Studio en 5 minutos.",
     instagram: "https://www.instagram.com/jpssnd/?__pwa=1",
   },
   {
@@ -257,5 +257,12 @@ export const ORGANIZERS: Organizer[] = [
     description:
       "Colaborador del asado en la gestion y organizacion del evento.",
     instagram: "https://www.instagram.com/oasislive_col/?__pwa=1",
+  },
+  {
+    name: "Patomino",
+    role: "Gestion",
+    description:
+      "Pato siempre gestiona y soluciona, ya sea en los visuales o en eventos de esta envergadura; se asegura de que cada detalle funcione a la perfeccion.",
+    instagram: "https://www.instagram.com/patomino05",
   },
 ];
