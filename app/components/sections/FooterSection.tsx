@@ -104,10 +104,10 @@ export function FooterSection() {
               <Image
                 src="/assets/AM.png"
                 alt="Asado Místico"
-                width={90}
+                width={190}
                 height={90}
                 style={{ marginBottom: "1.5rem" }}
-                className="w-20 h-20 object-contain no-select filter-none"
+                className="w-36 h-20 object-contain no-select filter-none"
               />
               <p
                 className="text-gray-400 text-base md:text-lg leading-relaxed"
