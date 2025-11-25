@@ -146,9 +146,8 @@ export const ARTISTS: Artist[] = [
       "Maestro de las tornamesas que mantiene la energia en su punto maximo con sets unicos e irrepetibles.",
     genre: "DJ Set",
     event: "808",
-    backgroundImage: "/assets/artists/dj1.jpg",
-    profileImage: "/assets/artists/dj2.jpg",
-    spotify: "https://open.spotify.com/artist/djenvivo",
+    backgroundImage: "/assets/artists/dj1.jpeg",
+    profileImage: "/assets/artists/dj2.jpeg",
     instagram: "https://www.instagram.com/scaaarletttttt/?__pwa=1",
   },
 ];
@@ -194,7 +193,8 @@ export const ORGANIZERS: Organizer[] = [
   {
     name: "Que Parche",
     role: "Patrocinador",
-    description: "App de eventos desarrollada por Gundam y Raven",
+    description:
+      "App de eventos desarrollada por Gundam y Raven que va a pagar el fokin asado.",
     instagram: "https://www.instagram.com/queparche_app/?__pwa=1",
   },
   {

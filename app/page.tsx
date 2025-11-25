@@ -5,6 +5,7 @@ import { FooterSection } from "./components/sections/FooterSection";
 import { HeroSection } from "./components/sections/HeroSection";
 import { LocationSection } from "./components/sections/LocationSection";
 import { OrganizersSection } from "./components/sections/OrganizersSection";
+import { SponsorSection } from "./components/sections/SponsorSection";
 import { SpotifySection } from "./components/sections/SpotifySection";
 import { AudioPlayer } from "./components/ui/AudioPlayer";
 import { Navbar } from "./components/ui/Navbar";
@@ -16,6 +17,7 @@ export default function Home() {
       <AudioPlayer />
       <main className="relative">
         <HeroSection />
+        <SponsorSection />
         <div className="py-20 md:py-28 lg:py-32">
           <ArtistsSection />
         </div>

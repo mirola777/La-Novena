@@ -213,14 +213,11 @@ export function FooterSection() {
                 className="text-gray-400 text-base md:text-lg leading-relaxed"
                 style={{ marginBottom: "2rem" }}
               >
-                Un evento underground que trae lo mejor del urbano desde toda
-                Colombia. Artistas de Bogota, Barranquilla y Medellin se unen en
-                una misma tarima. Organizado por EnMed junto con Oasis Ticket,
-                bajo el liderazgo de David MS como CEO principal, acompanado del
-                equipo completo de EnMed: Xcarlex, VLV, Maker, 2Z y mas. Desde
-                2022, 808 Fest se ha consolidado como el punto de encuentro del
-                hip hop y la musica electronica en la escena underground de la
-                ciudad.
+                Inicio el 15 de diciembre de 2022. Creado por Oasis Live y
+                EnMed, nace de la necesidad de mostrar a los artistas
+                underground en vivo de forma profesional, ofreciendo una puesta
+                en escena y una produccion disenadas para dignificar la escena
+                emergente.
               </p>
               <div className="grid grid-cols-2 gap-4 w-full">
                 <div className="relative w-full aspect-square overflow-hidden rounded-lg border border-green-400/20">
