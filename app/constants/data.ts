@@ -204,7 +204,7 @@ export const ORGANIZERS: Organizer[] = [
     instagram: "https://www.instagram.com/mirola777/?__pwa=1",
   },
   {
-    name: "DavidMS",
+    name: "KingDavidMS",
     role: "CEO del 808 Fest",
     description:
       "Lider principal del 808 Fest, organizando el mejor urbano underground.",
@@ -264,5 +264,11 @@ export const ORGANIZERS: Organizer[] = [
     description:
       "Pato siempre gestiona y soluciona, ya sea en los visuales o en eventos de esta envergadura; se asegura de que cada detalle funcione a la perfeccion.",
     instagram: "https://www.instagram.com/patomino05",
+  },
+  {
+    name: "Haski",
+    role: "Socio y Gestor del 808 Fest",
+    description: "Un duro de las cámaras y creación de contenido.",
+    instagram: "https://www.instagram.com/by.haski",
   },
 ];
