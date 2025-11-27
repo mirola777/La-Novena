@@ -268,7 +268,7 @@ export const ORGANIZERS: Organizer[] = [
   {
     name: "Haski",
     role: "Socio y Gestor del 808 Fest",
-    description: "Un duro de las cámaras y creación de contenido.",
+    description: "Un duro de las camaras y creación de contenido.",
     instagram: "https://www.instagram.com/by.haski",
   },
 ];
