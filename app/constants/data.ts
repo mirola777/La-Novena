@@ -211,7 +211,7 @@ export const ORGANIZERS: Organizer[] = [
     instagram: "https://www.instagram.com/thekingdavidms/?__pwa=1",
   },
   {
-    name: "22ce",
+    name: "22doce",
     role: "Gestion y Tramites",
     description:
       "El que presta la casa, hace las gestiones complicadas y se mueve en el bajo mundo.",
